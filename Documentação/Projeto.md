@@ -24,10 +24,15 @@ Os membros do grupo são:
    
    1.3 [Projeto da Interface](3-Interface.md)
 
+2. Artefatos
+   
+   2.1 [Personas](Personas.md)
+   
+   1.2 [Especificações do Projeto](2-Especificações.md)
+   
+   1.3 [Projeto da Interface](3-Interface.md)
+
    
 
 
 
-
-3. Artefatos
-   1.1
