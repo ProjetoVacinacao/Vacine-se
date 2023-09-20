@@ -15,4 +15,13 @@ Os membros do grupo são:
 - Natalia da Silva Reis
 
 ## Estrutura do Documento
-[Contribution guidelines for this project](Documentação/1. Introdução.md)
+1. Documentação
+1.1 [Introdução](Documentação/1. Introdução.md)
+1.2 [Especificações do Projeto](Documentação/1. Introdução.md)
+1.3 [Projeto de Interface](Documentação/1. Introdução.md)
+1.4 [Apresentação](Documentação/1. Introdução.md)
+   
+2.Artefatos
+2.1 [Mapa de Stakeholders](Documentação/1. Introdução.md)
+2.2 [Matriz CSD](Documentação/1. Introdução.md)
+2.3 [Personas](Documentação/1. Introdução.md)
