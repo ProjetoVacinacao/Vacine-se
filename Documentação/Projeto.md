@@ -16,8 +16,8 @@ Os membros do grupo são:
 
 ## Estrutura do Documento
 1. Documentação
-2. 
-1.1 [Introdução](Documentação/1. Introdução.md)
+
+ [Introdução](Documentação/1. Introdução.md)
    
 1.2 [Especificações do Projeto](Documentação/1. Introdução.md)
 
