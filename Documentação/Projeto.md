@@ -26,7 +26,7 @@ Os membros do grupo são:
 
 2. Artefatos
    
-   2.1 [Personas](Personas.md)
+   2.1 [Personas](Artefatos/Personas.md)
    
    1.2 [Especificações do Projeto](2-Especificações.md)
    
