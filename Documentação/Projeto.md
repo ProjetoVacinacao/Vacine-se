@@ -15,5 +15,5 @@ Os membros do grupo são:
 - Natalia da Silva Reis
 
 ## Estrutura do Documento
-[2- Especificações do Projeto](Documentação/2.-Especificações%20do%20Projeto.md)
+[2- Especificações do Projeto](Documentação/2.-EspecificaçõesdoProjeto.md)
 [3- Projeto de Interface](Documentação/3-Projeto%20de%20Interface.md)
