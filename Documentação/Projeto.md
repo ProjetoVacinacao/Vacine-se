@@ -15,4 +15,4 @@ Os membros do grupo são:
 - Natalia da Silva Reis
 
 ## Estrutura do Documento
-[Contribution guidelines for this project](docs/CONTRIBUTING.md)
+[Contribution guidelines for this project](Documentação/1. Introdução.md)
