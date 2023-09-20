@@ -17,8 +17,11 @@ Os membros do grupo são:
 ## Estrutura do Documento
 
 1. Documentação
+   
    1.1 [Introdução](1-Introdução.md)
+   
    1.2 [Especificações do Projeto](2-Especificações.md)
+   
    1.3 [Projeto da Interface](3-Interface.md)
 
    
@@ -26,5 +29,5 @@ Os membros do grupo são:
 
 
 
-2. Artefatos
+3. Artefatos
    1.1
