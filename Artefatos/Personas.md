@@ -10,7 +10,7 @@
 ![Artefatos](imagens/maria.png)
 
 ## Ana
-![Artefatos](imagens/Ana 38-page-0001.png)
+![Artefatos](imagens/Anna 38_page-0001.jpg)
 
 ## Antônio
 ![Artefatos](imagens/Antônio.png)
