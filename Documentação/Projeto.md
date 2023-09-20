@@ -17,5 +17,5 @@ Os membros do grupo são:
 ## Estrutura do Documento
 
 1. [Introdução](1-Contexto.md)
-2. [Especificações do Projeto](Documentação/2.-Especificações.md)
+2. [Especificações do Projeto](Documentação/2-Especificações.md)
 3. [Projeto da Interface](3-Interface.md)
