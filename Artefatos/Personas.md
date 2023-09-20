@@ -4,7 +4,7 @@
 
 
 ## Emily
-![Artefatos](imagens/Emilly G.pdf)
+![Artefatos](imagens/emilly.png)
 
 ## Maria
 ![Artefatos](imagens/maria.png)
