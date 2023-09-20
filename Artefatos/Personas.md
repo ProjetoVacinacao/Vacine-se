@@ -1,7 +1,7 @@
 # Personas
 
 ## Lucas
-![UserFlow](Artefatos/imagens/maria.png)
+![Artefatos](imagens/maria.png)
 
 
 ## Emily
