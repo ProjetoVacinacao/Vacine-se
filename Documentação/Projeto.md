@@ -19,8 +19,7 @@ Os membros do grupo são:
 
  Documentação/Projeto.md:
 
-[Projeto](Documentação/Projeto.md)
-Documentação/2.-Especificações do Projeto.md:
+[Introdução](Documentação/1- Introdução.md)
 
 [Especificações do Projeto](Documentação/2.-Especificações%20do%20Projeto.md)
 Documentação/3-Projeto de Interface.md:
