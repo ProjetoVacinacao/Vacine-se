@@ -15,5 +15,7 @@ Os membros do grupo são:
 - Natalia da Silva Reis
 
 ## Estrutura do Documento
-[2- Especificações do Projeto]([Documentação/2.-EspecificaçõesdoProjeto.md](https://github.com/ProjetoVacinacao/Vacine-se/blob/master/Documenta%C3%A7%C3%A3o/1-%20Introdu%C3%A7%C3%A3o.md#introdu%C3%A7%C3%A3o)https://github.com/ProjetoVacinacao/Vacine-se/blob/master/Documenta%C3%A7%C3%A3o/1-%20Introdu%C3%A7%C3%A3o.md#introdu%C3%A7%C3%A3o)
-[3- Projeto de Interface](Documentação/3-Projeto%20de%20Interface.md)
+
+1. [Introdução](1-Contexto.md)
+2. [Especificações do Projeto](2-Especificação.md)
+3. [Projeto da Interface](3-Interface.md)
