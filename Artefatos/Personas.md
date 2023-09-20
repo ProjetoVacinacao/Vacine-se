@@ -1,6 +1,7 @@
 # Personas
 
 ## Lucas
+Artefatos/imagens/maria.png
 
 ## Emily
 
