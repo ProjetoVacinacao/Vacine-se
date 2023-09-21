@@ -1,7 +1,7 @@
 # Personas
 
 ## Lucas
-![Artefatos](imagens/lucas-45.jpg)
+![Artefatos](imagens/Lucas-45.jpg)
 
 ## Emily
 ![Artefatos](imagens/emilly.png)
