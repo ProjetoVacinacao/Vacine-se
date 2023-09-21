@@ -22,7 +22,6 @@ Os membros do grupo são:
    
    3. [Projeto da Interface](3-Interface.md)
       
-   4. [Apresentação](Documentação/Apresentação/SLIDE-TRABALHO%20INTERDICIPLINAR.pdf)
 
 
 
