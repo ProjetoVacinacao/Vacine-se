@@ -11,7 +11,7 @@ Os membros do grupo são:
 - Jennifer Gabriela Barbosa Barcelos
 - Matheus Alexandre Pereira Braga
 - Maria Eduarda Martins Rodrigues
--Marina Freitas Caputo Oliveira
+- Marina Freitas Caputo Oliveira
 - Natalia da Silva Reis
 
 ## Estrutura do Documento
