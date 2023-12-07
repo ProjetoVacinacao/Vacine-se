@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Cartão de Vacina</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="cartao\style.css">
+</head>
+
+<body>
+  <!-- Início - Menu Lateral -->
+  <nav class="menu-lateral">
+    <ul>
+      <li class="item-menu ativo">
+        <a href="#">
+          <span class="icon"><i class="bi bi-house-fill"></i></span>
+          <span class="txt-link"></span>
+        </a>
+      </li>
+      <li class="item-menu">
+        <a href="index.html">
+          <span class="icon"><i class="bi bi-calendar3"></i></span>
+          <span class="txt-link"></span>
+        </a>
+      </li>
+      <li class="item-menu">
+        <a href="#">
+          <span class="icon"><i class="bi bi-geo-alt-fill"></i></span>
+          <span class="txt-link"></span>
+        </a>
+      </li>
+      <li class="item-menu">
+        <a href="#">
+          <span class="icon"><i class="bi bi-person-vcard-fill"></i></span>
+          <span class="txt-link"></span>
+        </a>
+      </li>
+
+      <li class="item-menu">
+        <a href="#">
+          <span class="icon"><i class="bi bi-question-lg"></i></span>
+          <span class="txt-link"></span>
+        </a>
+      </li>
+      <li class="item-menu">
+        <a href="#">
+          <span class="icon"><i class="bi bi-collection-fill"></i></span>
+          <span class="txt-link"></span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <!-- Fim - Menu Lateral -->
+
+  <!-- Início - Cartão de Vacina -->
+  <div class="conteudo-principal">
+    <div id="content" class="p-4 p-md-5 pt-5">
+      <h1 class="mb-4">Carteira Nacional de Vacinação</h1>
+
+      <!-- Início - Descrições -->
+      <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+              Descrição do Documento
+            </button>
+          </h2>
+          <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">A Carteira Nacional de Vacinação é o documento que reune as vacinas, datas,
+              reforços e informações adicionais sobre a vacinação do usuário. Atualmente, 48 imunobiológicos são
+              distribuídos anualmente pelo Programa Nacional de Imunizações - PNI (vacinas, imunobiológicos especiais,
+              soros e imunoglobulinas), sendo <strong>20 vacinas oferecidas</strong> às crianças, adolescentes, adultos,
+              idosos e gestantes conforme o Calendário Nacional de Vacinação.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+              Vacinas
+            </button>
+          </h2>
+          <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">BCG; Hepatite B; Penta; Pólio inativada; Pólio oral; Rotavírus; Pneumo 10;
+              Meningo
+              C; Febre amarela; Tríplice viral (sarampo, caxumba e rubéola); Tetra viral (sarampo, caxumba e rubéola e
+              varicela); DTP; Hepatite A; Varicela, Difteria e tétano adulto (dT); Meningocócica ACWY; HPV
+              quadrivalente;
+              dTpa; Influenza e Pneumocócica 23-valente (Pneumo 23)</div>
+          </div>
+        </div>
+      </div>
+      <!-- Fim - Descrições -->
+
+      <!-- Início - Doses -->
+      <h3>Minhas Doses</h3>
+      <form id="form-vacina">
+        <div class="form-group row">
+          <div class="col-sm-4">
+            <select name="filtro_completa" id="filtro_completa" onchange="ListaVacinas(event)" class="form-control">
+              <option value="">Vacinação completa?</option>
+              <option value="sim">Sim</option>
+              <option value="não">Não</option>
+            </select>
+          </div>
+          <div class="col-sm-4">
+            <select name="filtro_idade" id="filtro_idade" onchange="ListaVacinas(event)" class="form-control">
+              <option value="">Selecionar idade</option>
+              <option value="ao nascer">Ao nascer</option>
+              <option value="2 meses">2 meses</option>
+              <option value="3 meses">3 meses</option>
+              <option value="4 meses">4 meses</option>
+              <option value="5 meses">5 meses</option>
+              <option value="6 meses">6 meses</option>
+              <option value="7 meses">7 meses</option>
+              <option value="9 meses">9 meses</option>
+              <option value="12 meses">12 meses</option>
+              <option value="15 meses">15 meses</option>
+              <option value="4 anos">4 anos</option>
+              <option value="9 a 19 anos">9 a 19 anos</option>
+              <option value="20 a 59 anos">20 a 59 anos</option>
+              <option value="60 anos ou mais">60 anos ou mais</option>
+              <option value="gestantes">Gestantes</option>
+            </select>
+          </div>
+          <div id="pesquisa">
+            <div class="form-group row">
+              <div class="col-sm-4">
+                <input type="text" id="searchVacina" class="form-control" placeholder="Pesquisar vacina">
+              </div>
+              <div class="col-sm-1">
+                <button onclick="ListaVacinas(event)" class="btn btn-primary">Pesquisar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+
+      <div class="row">
+        <div class="col-sm-12">
+          <table id="grid-vacinas" class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Idade</th>
+                <th scope="col">Vacina</th>
+                <th scope="col">Dose Única</th>
+                <th scope="col">Uma Dose</th>
+                <th scope="col">1ª Dose</th>
+                <th scope="col">2ª Dose</th>
+                <th scope="col">3ª Dose</th>
+                <th scope="col">1º Reforço</th>
+                <th scope="col">2º Reforço</th>
+                <th scope="col">Reforço 10 anos</th>
+                <th scope="col">Fabricante</th>
+                <th scope="col">Lote</th>
+                <th scope="col">Responsável</th>
+                <th scope="col">Vacinação completa?</th>
+              </tr>
+            </thead>
+            <tbody id="table-vacinas">
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+      //Carrega os dados a partir da API JSONServer
+      var db = []
+      readVacina(dados => {
+        db = dados;
+        exibirVacinas()
+      });
+
+      //Função para listar na tabela as vacinas que estão associados aos filtros 
+      function exibirVacinas() {
+
+        //Obtem os dados informados pelo usuário nos filtros
+        let fc = document.getElementById('filtro_completa').value;
+        let fcg = document.getElementById('filtro_idade').value;
+        let fcv = document.getElementById('searchVacina').value.toLowerCase();
+
+        //Limpa a lista de vacinas apresentadas
+        tableVacinas = document.getElementById("table-vacinas");
+        tableVacinas.innerHTML = "";
+
+        //Popula a tabela com os registros do banco de dados
+        for (let index = 0; index < db.length; index++) {
+          const vacina = db[index];
+
+          //Verifica se os dados da vacina batem com os filtros
+          if (((vacina.completa == fc) || (fc == '')) && ((vacina.idade == fcg) || (fcg == '')) && ((vacina.vacina.toLowerCase() == fcv) || (fcv == ''))) {
+
+            //Inclui a vacina na tabela    
+            tableVacinas.innerHTML += `<tr><td scope="row">${vacina.idade}</td>
+                                                    <td>${vacina.vacina}</td>
+                                                    <td>${vacina.doseunica}</td>
+                                                    <td>${vacina.umadose}</td>
+                                                    <td>${vacina.primeiradose}</td>
+                                                    <td>${vacina.segundadose}</td>
+                                                    <td>${vacina.terceiradose}</td>
+                                                    <td>${vacina.primeiroreforco}</td>
+                                                    <td>${vacina.segundoreforco}</td>
+                                                    <td>${vacina.reforco10}</td>
+                                                    <td>${vacina.fabricante}</td>
+                                                    <td>${vacina.lote}</td>
+                                                    <td>${vacina.responsavel}</td>
+                                                    <td>${vacina.completa}</td>
+                                                   </tr>`;
+          }
+        }
+      }
+      function ListaVacinas(event) {
+        event.preventDefault();
+        exibirVacinas();
+      }
+    </script>
+  </div>
+  <!-- Fim - Doses -->
+  <!-- Fim - Cartão de Vacina -->
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/popper.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="cartao\script.js"></script>
+</body>
+
+</html>
