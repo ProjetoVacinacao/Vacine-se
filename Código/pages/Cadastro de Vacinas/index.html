@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Vacinas</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <body>
+        <nav class="menu-lateral">
+            <ul>
+                <li class="item-menu ativo">
+                    <a href="#">
+                        <span class="icon"><i class="bi bi-lungs-fill"></i></span>
+                        <span class="txt-link"></span>
+                    </a>
+                </li>
+                <li class="item-menu">
+                    <a href="#">
+                        <span class="icon"><i class="bi bi-person-vcard-fill"></i></span>
+                        <span class="txt-link"></span>
+                    </a>
+                </li>
+                <li class="item-menu">
+                    <a href="#">
+                        <span class="icon"><i class="bi bi-geo-alt-fill"></i></span>
+                        <span class="txt-link"></span>
+                    </a>
+                </li>
+                <li class="item-menu">
+                    <a href="#">
+                        <span class="icon"><i class="bi bi-calendar3"></i></span>
+                        <span class="txt-link"></span>
+                    </a>
+                </li>
+                <li class="item-menu">
+                    <a href="#">
+                        <span class="icon"><i class="bi bi-question-lg"></i></span>
+                        <span class="txt-link"></span>
+                    </a>
+                </li>
+            <li class="item-menu">
+                <a href="#">
+                    <span class="icon"><i class="bi bi-collection-fill"></i></span>
+                    <span class="txt-link"></span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+        <div class="conteudo">
+            <div id="form-container">
+                <h1>Cadastro de Vacinas</h1>
+            
+                <form id="vaccine-form">
+                  <label for="vaccine-name">Nome da Vacina:</label>
+                  <input type="text" id="vaccine-name" required>
+            
+                  <label for="vaccine-lot">Lote:</label>
+                  <input type="text" id="vaccine-lot" required>
+            
+                  <label for="vaccine-manufacturer">Fabricante:</label>
+                  <input type="text" id="vaccine-manufacturer" required>
+            
+                  <label for="applier">Funcionário Aplicador:</label>
+                  <input type="text" id="applier" required>
+            
+                  <label for="application-date">Data de Aplicação:</label>
+                  <input type="date" id="application-date" required>
+            
+                  <button type="button" onclick="addVaccine()">Adicionar</button>
+                </form>
+            
+                <ul id="vaccine-list"></ul>
+              </div>
+        
+    <script src="app.js"></script>
+</body>
+</html>
