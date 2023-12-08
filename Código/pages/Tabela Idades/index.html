@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Tabela Vacina</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="script.js"></script>
+</head>
+
+<body>
+  <main style=display:flex;>
+    <div>
+
+      <nav class="menu-lateral">
+        <ul>
+          <li class="item-menu ativo">
+            <a href="#">
+              <span class="icon"><i class="bi bi-house-fill"></i></span>
+              <span class="txt-link"></span>
+            </a>
+          </li>
+          <li class="item-menu">
+            <a href="#">
+              <span class="icon"><i class="bi bi-calendar3"></i></span>
+              <span class="txt-link"></span>
+            </a>
+          </li>
+          <li class="item-menu">
+            <a href="#">
+              <span class="icon"><i class="bi bi-geo-alt-fill"></i></span>
+              <span class="txt-link"></span>
+            </a>
+          </li>
+          <li class="item-menu">
+            <a href="#">
+              <span class="icon"><i class="bi bi-person-vcard-fill"></i></span>
+              <span class="txt-link"></span>
+            </a>
+          </li>
+          <li class="item-menu">
+            <a href="#">
+              <span class="icon"><i class="bi bi-question-lg"></i></span>
+              <span class="txt-link"></span>
+            </a>
+          </li>
+          <li class="item-menu">
+            <a href="#">
+              <span class="icon"><i class="bi bi-collection-fill"></i></span>
+              <span class="txt-link"></span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <script src="script.js"></script>
+
+      </nav>
+    </div>
+    <div>
+      <div>
+        <section class="border" <div class="row">
+          <h1>Calendário de Idades das Vacinas:</h1>
+      </div>
+
+      <div>
+        <div id="searchContainer">
+          <input type="text" id="searchInput" placeholder="Pesquisar">
+          <button id="searchButton" onclick="search()">Pesquisar</button>
+        </div>
+
+        <div>
+          <!-- Tabela com a imagem -->
+          <table>
+            <tr>
+              <td>
+                <img src="calendario idade.jpg" alt="Tabela idade">
+              </td>
+
+            </tr>
+          </table>
+
+          <script src="script.js"></script>
+
+
+        </div>
+
+        <div>
+          <button id="voltar">Voltar</button>
+
+          <script>
+            // Adiciona um ouvinte de evento ao botão
+            document.getElementById('voltar').addEventListener('click', function () {
+              // Use o método `history.back()` para voltar para a página anterior
+              window.history.back();
+            });
+          </script>
+          </script>
+        </div>
+      </div>
+  </main>
+  <!--Noticias -->
+  <fieldset>
+    <div>
+
+      <div class="news-container">
+        <div id="news-sidebar">
+          <h2>Últimas Notícias</h2>
+          <ul id="news-list"></ul>
+        </div>
+
+        <body>
+
+          <body>
+
+            <div class="noticias-container" id="noticias-container">
+              <!-- As notícias serão exibidas aqui -->
+            </div>
+
+            <script>
+              // URLs das notícias
+              const noticias = [
+                {
+                  titulo: 'Vacinação de Crianças e Adolescentes',
+                  conteudo: 'Saiba mais sobre a vacinação de crianças e adolescentes.',
+                  link: 'https://prefeitura.pbh.gov.br/saude/vacinacao-criancas-e-adolescentes'
+                },
+                {
+                  titulo: 'Campanha de Multivacinação',
+                  conteudo: 'Informações sobre a campanha de multivacinação.',
+                  link: 'https://prefeitura.pbh.gov.br/saude/informacoes/vigilancia/imunizacao/multivacinacao'
+                },
+                {
+                  titulo: 'Campanha de Vacinação contra COVID-19',
+                  conteudo: 'Participe da campanha de vacinação contra a COVID-19.',
+                  link: 'https://prefeitura.pbh.gov.br/campanha-de-vacinacao-contra-covid-19'
+                }
+              ];
+
+
+              // Função para exibir notícias no site
+              function exibirNoticias() {
+                const noticiasContainer = document.getElementById('noticias-container');
+
+                // Limpe o conteúdo existente
+                noticiasContainer.innerHTML = '';
+
+                // Itere sobre as notícias e adicione ao contêiner
+                noticias.forEach(noticia => {
+                  const noticiaDiv = document.createElement('div');
+                  noticiaDiv.classList.add('noticia');
+
+                  const titulo = document.createElement('h2');
+                  titulo.textContent = noticia.titulo;
+
+                  const conteudo = document.createElement('p');
+                  conteudo.textContent = noticia.conteudo;
+
+                  const link = document.createElement('a');
+                  link.href = noticia.link;
+                  link.textContent = 'Leia mais';
+
+                  noticiaDiv.appendChild(titulo);
+                  noticiaDiv.appendChild(conteudo);
+                  noticiaDiv.appendChild(link);
+
+                  noticiasContainer.appendChild(noticiaDiv);
+                });
+              }
+
+              // Chame a função para exibir notícias ao carregar a página
+              exibirNoticias();
+            </script>
+
+          </body>
+
+        </body>
+
+      </div>
+    </div>
+    <!-- Rodapé (footer) -->
+    </div>
+    <div>
+      <footer>
+        <p> © 2023 Todos os direitos reservados</p>
+      </footer>
+    </div>
+
+</body>
+
+</html>
