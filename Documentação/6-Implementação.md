@@ -12,7 +12,7 @@
 | Hospedagem | Replit |
 
 ## Arquitetura da solução
-![UserFlow](images/interface-0.jpg)
+![Documentação](images/TelaFuncionario.png)
 
 Assim que o usuário entra na plataforma, ele é apresentado a um questionário. O objetivo desse processo, é conhecer o usuário e aferir seu nível de conhecimento sobre o mercado.
 
