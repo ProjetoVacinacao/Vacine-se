@@ -19,9 +19,7 @@
 
 Assim que o funcionário entra na plataform, ele tem acesso as telas de:
 - Login: Acessa com as credencias de acesso especificas do funcionário.
-  
 - Cadastro de Vacinas: Usado para cadastrar a vacina que o usuário irá tomar.
-
 - Cadastro de Próximas Vacinas: Usado para cadastrar as próximas doses que o usuário deve tomar.
 
 ### Tela do Usuário
