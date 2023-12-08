@@ -5,7 +5,12 @@
 |----|---------|-----------------------|
 | 1 | `Cadastrar novo usuário` <br><br> Passo a passo: <br> `1.` Preencher todos os campos corretamentes. <br> `2.` Clicar no botão para fazer o cadastro | RF-001 |
 | 2 | `Login` <br><br> Passo a passo: <br> `1.` Informar seus dados nos campos <br> `2.` Clicar no botão para entrar | RF-003 |
-| 3 | `Cadastrar Vacina` <br><br> Passo a passo: <br> `1.` Fazer login <br> `2.` Preencher com os dados do usuário e da vacina. <br> `3.` Clicar no botão para cadastrar | RF-004 |
+| 3 | `Cadastrar Vacina` <br><br> Passo a passo: <br> `1.` Preencher com os dados do usuário e da vacina <br> `2.` Clicar no botão para cadastrar  | RF-004 |
+| 4 | `Cadastro no Calendário` <br><br> Passo a passo: <br> `1.` Selecionar dia, mês e ano no calendário <br> `2.` Digitar o nome da vacina no campo <br> `3.` Clicar no botão para cadastrar | RF-003 |
+| 5 | `Calendário de Vacinas` <br><br> Passo a passo: <br> `1.` Informar seus dados nos campos <br> `2.` Clicar no botão para entrar | RF-003 |
+| 6 | `Cartão de Vacina` <br><br> Passo a passo: <br> `1.` Informar seus dados nos campos <br> `2.` Clicar no botão para entrar | RF-003 |
+| 7 | `Mapa` <br><br> Passo a passo: <br> `1.` Informar seus dados nos campos <br> `2.` Clicar no botão para entrar | RF-003 |
+| 8 | `Tabela Idades` <br><br> Passo a passo: <br> `1.` Informar seus dados nos campos <br> `2.` Clicar no botão para entrar | RF-003 |
 
 ## Avaliação
 Os testes foram fundamentais para identificar falhas no desenvolvimento e na experiência do usuário.
