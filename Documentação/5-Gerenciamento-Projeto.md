@@ -19,32 +19,50 @@ O método "Design Thinking" foi utilizado na fase de concepção do projeto. Já
 •Revisão dos resultados da fase de idealização.
 
 •Identificação e documentação dos requisitos essenciais para o controle de vacinas.
-Elaboração da lista de funcionalidades prioritárias.
-Criação de wireframes e protótipos iniciais da interface do usuário.
-Coleta de feedback sobre a usabilidade e funcionalidades.
-Divisão das tarefas para a primeira sprint.
-Definição de metas específicas e prazos para a entrega.
-Preparação para o início do desenvolvimento.
+
+•Elaboração da lista de funcionalidades prioritárias.
+
+•Criação de wireframes e protótipos iniciais da interface do usuário.
+
+•Coleta de feedback sobre a usabilidade e funcionalidades.
+
+•Divisão das tarefas para a primeira sprint.
+
+•Definição de metas específicas e prazos para a entrega.
+
+•Preparação para o início do desenvolvimento.
 
 ### Sprint 2 e Sprint 3 - Desenvolvimento:
 
-Criação do repositório do projeto e configuração do controle de versão.
-Desenvolvimento de funcionalidades principais.
-Implementação das funcionalidades básicas, como cadastro de usuários e controle de vacinas.
-Integração inicial com APIs de dados relevantes.
-Testes e correções.
-Correção de bugs identificados durante os testes.
-Aprimoramento e preparação para lançamento.
-Implementação de recursos adicionais.
-Aperfeiçoamento da interface do usuário com base nos feedbacks anteriores.
-Testes finais e otimizações.
-Preparação para o lançamento.
+•Criação do repositório do projeto e configuração do controle de versão.
+
+•Desenvolvimento de funcionalidades principais.
+
+•Implementação das funcionalidades básicas, como cadastro de usuários e controle de vacinas.
+
+•Integração inicial com APIs de dados relevantes.
+
+•Testes e correções.
+
+•Correção de bugs identificados durante os testes.
+
+•Aprimoramento e preparação para lançamento.
+
+•Implementação de recursos adicionais.
+
+•Aperfeiçoamento da interface do usuário com base nos feedbacks anteriores.
+
+•Testes finais e otimizações.
+
+•Preparação para o lançamento.
 
 ### Sprint 4 - Lançamento oficial da aplicação:
 
-Elaboração da documentação final do projeto.
-Documentação final e preparação para o lançamento.
-Apresentação do projeto
+•Elaboração da documentação final do projeto.
+
+•Documentação final e preparação para o lançamento.
+
+•Apresentação do projeto
 
 ## Ferramentas
 
