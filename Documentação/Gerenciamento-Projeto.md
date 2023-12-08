@@ -12,7 +12,7 @@ O método "Design Thinking" foi utilizado na fase de concepção do projeto. Já
 ## Processo
 
 
-## # Sprint 1 - Planejamento e Estruturação:
+### Sprint 1 - Planejamento e Estruturação:
 Definição de Requisitos;
 Revisão dos resultados da fase de idealização;
 Identificação e documentação dos requisitos essenciais para o controle de vacinas;
