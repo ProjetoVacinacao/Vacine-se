@@ -4,13 +4,13 @@
 | ID | CENÁRIO | REQUISITO RELACIONADO |
 |----|---------|-----------------------|
 | 1 | `Cadastrar novo usuário` <br><br> Passo a passo: <br> `1.` Preencher todos os campos corretamentes. <br> `2.` Clicar no botão para fazer o cadastro | RF-001 |
-| 2 | `Login` <br><br> Passo a passo: <br> `1.` Informar seus dados nos campos <br> `2.` Clicar no botão para entrar | RF-003 |
-| 3 | `Cadastrar Vacina` <br><br> Passo a passo: <br> `1.` Preencher com os dados do usuário e da vacina <br> `2.` Clicar no botão para cadastrar  | RF-004 |
+| 2 | `Login` <br><br> Passo a passo: <br> `1.` Informar seus dados nos campos <br> `2.` Clicar no botão para entrar | RF-002 |
+| 3 | `Cadastrar Vacina` <br><br> Passo a passo: <br> `1.` Preencher com os dados do usuário e da vacina <br> `2.` Clicar no botão para cadastrar  | RF-003 |
 | 4 | `Cadastro no Calendário` <br><br> Passo a passo: <br> `1.` Selecionar dia, mês e ano no calendário <br> `2.` Digitar o nome da vacina no campo <br> `3.` Clicar no botão para cadastrar | RF-003 |
-| 5 | `Calendário de Vacinas` <br><br> Passo a passo: <br> `1.` Selecionar no filtro o período que deseja buscar <br> `2.` Escrevar o nome da vacina que deseja procurar | RF-003 |
-| 6 | `Cartão de Vacina` <br><br> Passo a passo: <br> `1.` Selecionar no filtro o período que deseja buscar <br> `2.` Escrevar o nome da vacina que deseja procurar | RF-003 |
-| 7 | `Mapa` <br><br> Passo a passo: <br> `1.` Selecionar se deseja pesquisar por região, nome ou bairro <br> `2.` De acordo com o filtro escolhido, digite o nome no campo de texto | RF-003 |
-| 8 | `Tabela Idades` <br><br> Passo a passo: <br> `1.` Informar a vacina que deseja pequisar <br> `2.` Clicar no link para ter acesso á noticías | RF-003 |
+| 5 | `Calendário de Vacinas` <br><br> Passo a passo: <br> `1.` Selecionar no filtro o período que deseja buscar <br> `2.` Escrevar o nome da vacina que deseja procurar | RF-004 |
+| 6 | `Cartão de Vacina` <br><br> Passo a passo: <br> `1.` Selecionar no filtro o período que deseja buscar <br> `2.` Escrevar o nome da vacina que deseja procurar | RF-004 |
+| 7 | `Mapa` <br><br> Passo a passo: <br> `1.` Selecionar se deseja pesquisar por região, nome ou bairro <br> `2.` De acordo com o filtro escolhido, digite o nome no campo de texto | RF-006 |
+| 8 | `Tabela Idades` <br><br> Passo a passo: <br> `1.` Informar a vacina que deseja pequisar <br> `2.` Clicar no link para ter acesso á noticías | RF-008 e RF-010 |
 
 ## Avaliação
 Os testes foram fundamentais para identificar falhas no desenvolvimento e na experiência do usuário.
