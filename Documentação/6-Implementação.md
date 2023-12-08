@@ -18,4 +18,4 @@ Assim que o usuário entra na plataforma, ele é apresentado a um questionário.
 
 Depois de respondidas as perguntas, o usuário é redirecionado ao seu painel, onde encontra um *overview* da sua carteira, seu progresso de aprendizagem, eventos e notícias relacionados aos seus investimentos e artigos importantes sobre o mercado.
 
-![UserFlow](images/interface.jpg)
+![Documentação](images/TelaUsuario.png)
