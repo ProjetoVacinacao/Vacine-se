@@ -2,8 +2,7 @@
 
 ## Controle de Versão
 
-A ferramenta de controle de versão adotada no projeto foi o
-[Git](https://git-scm.com/).
+A ferramenta de controle de versão adotada no projeto foi o GitHub.
 
 ## Hospedagem
 
