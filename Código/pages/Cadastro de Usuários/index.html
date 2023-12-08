@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="form-image">
+      <img src="img/cadastro.png.png">
+    </div>
+    <form id="cad-form">
+      <div class="form-header">
+        <div class="title">
+          <h1> Cadastre-se</h1>
+        </div>
+      </div>
+      <div class="input-group">
+        <div class="input-box">
+          <label for="firstname">Primeiro Nome:</label>
+          <input type="text" id="firstname" placeholder="Digite o primeiro nome" required><br><br>
+        </div>
+        <div class="input-box">
+          <label for="lastname">Sobrenome:</label>
+          <input type="text" id="lastname" placeholder="Digite o Sobrenome" required><br><br>
+        </div>
+        <div class="input-box">
+          <label for="data">Data de Nascimento:</label>
+          <input type="date" id="data" placeholder="xx / xx / xxxx" required><br><br>
+        </div>
+        <div class="input-box">
+          <label for="cpf">CPF:</label>
+          <input type="text" id="cpf" placeholder="xxx.xxx.xxx-xx" required><br><br>
+        </div>
+        <div class="input-box">
+          <label for="number">Número de Telefone:</label>
+          <input type="text" id="number" placeholder="(xx) xxxxx-xxxx" required><br><br>
+        </div>
+        <div class="input-box">
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" placeholder="Digite o Email" required><br><br>
+        </div>
+        <div class="input-box">
+          <label for="password">Senha:</label>
+          <input type="password" id="password" placeholder="Digite sua senha" required><br><br>
+        </div>
+        <div class="input-box">
+          <label for="confirmpassword">Confirmar Senha:</label>
+          <input type="password" id="confirmpassword" placeholder="Confirme sua senha" required><br><br>
+        </div>
+        <div class="gender-group">
+          <div class="gender-input">
+            <h6> Gênero</h6>
+            <input type="radio" id="female" name="gender">
+            <label for="female">Feminino</label>
+          </div>
+          <div class="gender-input">
+            <input type="radio" id="male" name="gender">
+            <label for="male">Masculino</label>
+          </div>
+          <div class="gender-input">
+            <input type="radio" id="others" name="gender">
+            <label for="others">Outros</label>
+          </div>
+          <div class="gender-input">
+            <input type="radio" id="none" name="gender">
+            <label for="none">Prefiro não dizer</label>
+          </div>
+        </div>
+        <div class="continue-button">
+          <button type="button" onclick="addCad()">Cadastrar</button>
+        </div>
+        <div class="edit-button">
+
+        </div>
+    </form>
+  </div>
+  </div>
+  </div>
+  <div class="delete-button">
+  <div id="itens" class="itens"> </div>
+  </div>
+ 
+  <script src="script.js"></script>
+
+
+  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+</body>
+
+</html>
