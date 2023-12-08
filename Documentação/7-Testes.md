@@ -3,9 +3,9 @@
 ## Plano de testes
 | ID | CENÁRIO | REQUISITO RELACIONADO |
 |----|---------|-----------------------|
-| 1 | `Cadastrar novo usuário` <br><br> Passo a passo: <br> `1.` Preencher todos os campos corretamentes. <br> `2.` Clicar no botão para fazer o cadastro. | RF-001 |
-| 2 | `Login` <br><br> Passo a passo: <br> `1.` Informar seus dados nos campos <br> `2.` Clicar no botão para entrar. | RF-003 |
-| 3 | `Cadastrar Vacina` <br><br> Passo a passo: <br> `1.` Fazer login <br> `2.` Preencher com os dados do usuário e da vacina. <br> `3.` Clicar no botão para cadastrar. <br><br> Após o envio da busca, o sistema retornará uma tela com os detalhes do ativo buscado. | RF-004 |
+| 1 | `Cadastrar novo usuário` <br><br> Passo a passo: <br> `1.` Preencher todos os campos corretamentes. <br> `2.` Clicar no botão para fazer o cadastro | RF-001 |
+| 2 | `Login` <br><br> Passo a passo: <br> `1.` Informar seus dados nos campos <br> `2.` Clicar no botão para entrar | RF-003 |
+| 3 | `Cadastrar Vacina` <br><br> Passo a passo: <br> `1.` Fazer login <br> `2.` Preencher com os dados do usuário e da vacina. <br> `3.` Clicar no botão para cadastrar | RF-004 |
 
 ## Avaliação
 Os testes foram fundamentais para identificar falhas no desenvolvimento e na experiência do usuário.
