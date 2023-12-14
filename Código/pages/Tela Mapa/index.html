@@ -4,8 +4,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>Tabela Vacina</title>
+  <title>Postos de Saúde</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+
   <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
   <link href='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css' rel='stylesheet' />
 </head>
@@ -14,52 +16,43 @@
 <body>
 
   <main style="display: flex;">
-    <div class="menu-lateral">
+    <nav class="menu-lateral">
       <ul>
         <li class="item-menu ativo">
-          <a href="#">
-            <span class="icon"><i class="bi bi-house-fill"></i></span>
-            <span class="txt-link"></span>
-          </a>
-        </li>
-        <li class="item-menu">
-          <a href="#">
-            <span class="icon"><i class="bi bi-calendar3"></i></span>
-            <span class="txt-link"></span>
-          </a>
-        </li>
-        <li class="item-menu">
-          <a href="#">
-            <span class="icon"><i class="bi bi-geo-alt-fill"></i></span>
-            <span class="txt-link"></span>
-          </a>
-        </li>
-        <li class="item-menu">
-          <a href="#">
+          <a href="../cartaoVacina/cartao.html">
             <span class="icon"><i class="bi bi-person-vcard-fill"></i></span>
             <span class="txt-link"></span>
           </a>
         </li>
         <li class="item-menu">
-          <a href="#">
-            <span class="icon"><i class="bi bi-question-lg"></i></span>
+          <a href="../calendario/indexx.html">
+            <span class="icon"><i class="bi bi-calendar3"></i></span>
             <span class="txt-link"></span>
           </a>
         </li>
         <li class="item-menu">
-          <a href="#">
-            <span class="icon"><i class="bi bi-collection-fill"></i></span>
+          <a href="../mapa/index.html">
+            <span class="icon"><i class="bi bi-geo-alt-fill"></i></span>
+            <span class="txt-link"></span>
+          </a>
+        </li>
+        <li class="item-menu">
+          <a href="../tabelaVacina/index.html">
+            <span class="icon"><i <i class="bi bi-newspaper"></i></span>
             <span class="txt-link"></span>
           </a>
         </li>
       </ul>
-    </div>
+    </nav>
 
     <!--Final código menu de cima-->
+
     <div class="titulo">
-      <h1>POSTOS DE SAÚDE</h1>
+
+      <h1>Postos de saúde</h1>
+      <hr style="border: 1px solid #000000; margin-top: 0.5rem; margin-bottom: 1rem;">
       <div class="row">
-        <hr class="width 80%">
+        <br></br>
       </div>
 
       <!--Início do mapa-->
@@ -72,8 +65,9 @@
 
       <!--Início pesquisa por regional-->
       <div class="divSearch">
-        <input id="pesquisar" placeholder="Pesquisar...">
-        <label for="search">Filtrar por
+        <br></br>
+        <input class="campo-pesquisa" id="pesquisar" placeholder="Pesquisar...">
+        <label class="filtro" for="search">Filtrar por:
           <select id="opcoes" name="opcoes">
             <option value="opcao1">Centro de Saúde</option>
             <option value="opcao2">Endereço</option>
@@ -83,7 +77,7 @@
       </div>
       <!--Final pesquisa por regional-->
 
-      <table id="contatosTable">
+      <table class="contatostabela" id="contatosTable">
         <thead>
           <tr>
             <th>Centro de saúde</th>
@@ -100,8 +94,8 @@
 
   <script src="script.js"></script>
   <script>
-    // ----------------------------------------------
-    // Cria uma estrutura de dados com informações das unidades da PUC Minas 
+
+    // Marcadores dos postos de saúde de Belo Horizonte
     let postos = [
       {
         id: 1,
@@ -726,6 +720,735 @@
       },
       {
         id: 70,
+        descricao: 'Posto Saúde Carlos Prates',
+        endereco: 'Rua Riachuelo, 35 - Carlos Prates',
+        cidade: 'Belo Horizonte',
+        latlong: [-43.963457606740434, -19.914553829262633],
+        url: 'https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/atencao-primaria/centro-de-saude',
+        cor: 'red'
+      },
+      {
+        id: 71,
+        descricao: 'Posto Saúde Coqueiros',
+        endereco: 'Rua Eneida, 1583 - Coqueiros',
+        cidade: 'Belo Horizonte',
+        latlong: [-44.022253349063206, -19.897537968030775],
+        url: 'https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/atencao-primaria/centro-de-saude',
+        cor: 'red'
+      },
+      {
+        id: 72,
+        descricao: 'Posto Saúde Dom Bosco',
+        endereco: 'Rua Olinto Magalhães, 1.939 - Ipanema',
+        cidade: 'Belo Horizonte',
+        latlong: [-43.99965672208559, -19.91192527654886],
+        url: 'https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/atencao-primaria/centro-de-saude',
+        cor: 'red'
+      },
+      {
+        id: 73,
+        descricao: 'Posto Saúde Dom Cabral',
+        endereco: 'Praça da Comunidade, 50 - Dom Cabral',
+        cidade: 'Belo Horizonte',
+        latlong: [-43.999923320230565, -19.922989438951706],
+        url: 'https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/atencao-primaria/centro-de-saude',
+        cor: 'red'
+      },
+      {
+        id: 74,
+        descricao: 'Posto Saúde Ermelinda',
+        endereco: 'Rua Paes de Abreu, 114 - Ermelinda',
+        cidade: 'Belo Horizonte',
+        latlong: [-43.95835825277227, -19.890182134175443],
+        url: 'https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/atencao-primaria/centro-de-saude',
+        cor: 'red'
+      },
+      {
+        id: 75,
+        descricao: 'Posto Saúde Glória',
+        endereco: 'Rua Eneida, 955 - Glória',
+        cidade: 'Belo Horizonte',
+        latlong: [-44.016855822079876, -19.901256644881165],
+        url: 'https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/atencao-primaria/centro-de-saude',
+        cor: 'red'
+      },
+      {
+        id: 76,
+        descricao: 'Posto Saúde Jardim Filadélfia',
+        endereco: 'Rua Caitité, 319 - Jardim Filadélfia',
+        cidade: 'Belo Horizonte',
+        latlong: [-44.00944625327787, -19.904748083540454],
+        url: 'https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/atencao-primaria/centro-de-saude',
+        cor: 'red'
+      },
+      {
+        id: 77,
+        descricao: 'Posto Saúde Jardim Montanhês',
+        endereco: 'Rua Padre Leopoldo Pereira, 407 - Jardim Montanhês',
+        cidade: 'Belo Horizonte',
+        latlong: [-43.98166926256151, -19.903833941076208],
+        url: 'https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/atencao-primaria/centro-de-saude',
+        cor: 'red'
+      },
+      {
+        id: 78,
+        descricao: 'Posto Saúde João Pinheiro',
+        endereco: 'Rua Frei Luiz de Souza, 811 - João Pinheiro',
+        cidade: 'Belo Horizonte',
+        latlong: [-44.00351697790146, -19.927288106593846],
+        url: 'https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/atencao-primaria/centro-de-saude',
+        cor: 'red'
+      },
+      {
+        id: 79,
+        descricao: 'Posto Saúde Padre Eustáquio',
+        endereco: 'Rua Carioca, 820 - Padre Eustáquio',
+        cidade: 'Belo Horizonte',
+        latlong: [-43.98915619139634, -19.915138519413365],
+        url: 'https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/atencao-primaria/centro-de-saude',
+        cor: 'red'
+      },
+      {
+        id: 80,
+        descricao: 'Posto Saúde Pindorama - Elza Martins',
+        endereco: 'Rua Rutilo, 96 - Pindorama',
+        cidade: 'Belo Horizonte',
+        latlong: [-44.02088126334866, -19.908189441775253],
+        url: 'https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/atencao-primaria/centro-de-saude',
+        cor: 'red'
+      },
+      {
+        id: 81,
+        descricao: 'Posto Saúde Pedreira Prado Lopes',
+        endereco: 'Rua Escravo  Isidoro, 601 - Pedreira Prado Lopes',
+        cidade: 'Belo Horizonte',
+        latlong: [-43.95048316256127, -19.90161427400713],
+        url: 'https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/atencao-primaria/centro-de-saude',
+        cor: 'red'
+      },
+      {
+        id: 82,
+        descricao: 'Posto Saúde Santos Anjos',
+        endereco: 'Rua Miosótis, 15B - Caiçara',
+        cidade: 'Belo Horizonte',
+        latlong: [-43.95650930673956, -19.90470772400383],
+        url: 'https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/atencao-primaria/centro-de-saude',
+        cor: 'red'
+      },
+      {
+        id: 83,
+        descricao: 'Posto Saúde São Cristóvão',
+        endereco: 'Rua Itapecerica, 555 - Lagoinha',
+        cidade: 'Belo Horizonte',
+        latlong: [-43.9442869644129, -19.908308971486658],
+        url: 'https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/atencao-primaria/centro-de-saude',
+        cor: 'red'
+      },
+      {
+        id: 84,
+        descricao: 'Posto Saúde Aarão Reis',
+        endereco: 'Rua Waldomiro Lobo, 177 - Aarão Reis',
+        cidade: 'Belo Horizonte',
+        latlong: [-43.92072956255508, -19.845703617244972],
+        url: 'https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/atencao-primaria/centro-de-saude',
+        cor: 'red'
+      },
+      {
+        id: 85,
+        descricao: 'Posto Saúde Campo Alegre',
+        endereco: 'Rua Beija Flor, 370 - Planalto',
+        cidade: 'Belo Horizonte',
+        latlong: [-43.949283564407644, -19.829765332116715],
+        url: 'https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/atencao-primaria/centro-de-saude',
+        cor: 'red'
+      },
+      {
+        id: 86,
+        descricao: 'Posto Saúde Etelvina Carneiro',
+        endereco: 'Rua Travessa Dois mil Quatrocentos e Dezessete, 235 - Etelvina Carneiro',
+        cidade: 'Belo Horizonte',
+        latlong: [-43.93184234906807, -19.81137363581836],
+        url: 'https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/atencao-primaria/centro-de-saude',
+        cor: 'red'
+      },
+      {
+        id: 87,
+        descricao: 'Posto Saúde Floramar',
+        endereco: 'Rua Igaraúnas, 15, Floramar',
+        cidade: 'Belo Horizonte',
+        latlong: [-43.93335263372534, -19.839289650959675],
+        url: 'https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/atencao-primaria/centro-de-saude',
+        cor: 'red'
+      },
+      {
+        id: 88,
+        descricao: 'Posto Saúde Guarani',
+        endereco: 'Rua Pacaembu, 160 - Guarani',
+        cidade: 'Belo Horizonte',
+        latlong: [-43.92424133372472, -19.842346954655245],
+        url: 'https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/atencao-primaria/centro-de-saude',
+        cor: 'red'
+      },
+      {
+        id: 88,
+        descricao: 'Posto Saúde Heliópolis',
+        endereco: 'Rua dos Beneditinos, 120 - Heliópolis',
+        cidade: 'Belo Horizonte',
+        latlong: [-43.942066450920976, -19.843819181152945],
+        url: 'https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/atencao-primaria/centro-de-saude',
+        cor: 'red'
+      },
+      {
+        id: 89,
+        descricao: 'Posto Saúde Jardim Guanabara',
+        endereco: 'Rua Fanny Martins de Barros, 71 - Jardim Guanabara',
+        cidade: 'Belo Horizonte',
+        latlong: [-43.93270248954636, -19.828251681146682],
+        url: 'https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/atencao-primaria/centro-de-saude',
+        cor: 'red'
+      },
+      {
+        id: 90,
+        descricao: 'Posto Saúde Jaqueline',
+        endereco: 'Rua Agenor de Paula Estrela, 1.110 - Jaqueline',
+        cidade: 'Belo Horizonte',
+        latlong: [-43.93657092207986, -19.80164773892996],
+        url: 'https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/atencao-primaria/centro-de-saude',
+        cor: 'red'
+      },
+      {
+        id: 91,
+        descricao: 'Posto Saúde Jaqueline 2',
+        endereco: 'Rua João Pereira Lima, 50 - Jaqueline',
+        cidade: 'Belo Horizonte',
+        latlong: [-43.94374454721042, -19.80501333848944],
+        url: 'https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/atencao-primaria/centro-de-saude',
+        cor: 'red'
+      },
+      {
+        id: 92,
+        descricao: 'Posto Saúde Jardim Felicidade',
+        endereco: 'Rua 28, 32 - Jardim Felicidade',
+        cidade: 'Belo Horizonte',
+        latlong: [-43.92775986968948, -19.82960746142636],
+        url: 'https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/atencao-primaria/centro-de-saude',
+        cor: 'red'
+      },
+      {
+        id: 93,
+        descricao: 'Posto Saúde Felicidade 2',
+        endereco: 'Rua Sônia Braz Xavier, 60 - Jardim Felicidade',
+        cidade: 'Belo Horizonte',
+        latlong: [-43.930665433722865, -19.82476471235524],
+        url: 'https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/atencao-primaria/centro-de-saude',
+        cor: 'red'
+      },
+      {
+        id: 94,
+        descricao: 'Posto Saúde Lajedo',
+        endereco: 'Rua Julio Ribeiro, 681 - Lajedo',
+        cidade: 'Belo Horizonte',
+        latlong: [-43.91364506441124, -19.83390073686161],
+        url: 'https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/atencao-primaria/centro-de-saude',
+        cor: 'red'
+      },
+      {
+        id: 95,
+        descricao: 'Posto Saúde MG 20 - Monte Azul',
+        endereco: 'Rua Padre Argemiro Moreira, 11.900 - Maria Teresa',
+        cidade: 'Belo Horizonte',
+        latlong: [-43.884483279759785, -19.816202768510593],
+        url: 'https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/atencao-primaria/centro-de-saude',
+        cor: 'red'
+      },
+      {
+        id: 96,
+        descricao: 'Posto Saúde Novo Aarão Reis',
+        endereco: 'Avenida Detetive Eduardo Fernandes, 200 - Novo Aarão Reis',
+        cidade: 'Belo Horizonte',
+        latlong: [-43.90883106441346, -19.841173769380816],
+        url: 'https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/atencao-primaria/centro-de-saude',
+        cor: 'red'
+      },
+      {
+        id: 97,
+        descricao: 'Posto Saúde Primeiro de Maio',
+        endereco: 'Rua Oscar Lobo Pereira, 207 - Primeiro de Maio',
+        cidade: 'Belo Horizonte',
+        latlong: [-43.92784387790405, -19.861113005348788],
+        url: 'https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/atencao-primaria/centro-de-saude',
+        cor: 'red'
+      },
+      {
+        id: 98,
+        descricao: 'Posto Saúde Providência',
+        endereco: 'Rua São Sebastião, 30 - Providência',
+        cidade: 'Belo Horizonte',
+        latlong: [-43.92906299139427, -19.853115585321945],
+        url: 'https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/atencao-primaria/centro-de-saude',
+        cor: 'red'
+      },
+      {
+        id: 99,
+        descricao: 'Posto Saúde São Bernardo',
+        endereco: 'Rua Armando Ribeiro dos Santos, 265 - São Bernardo',
+        cidade: 'Belo Horizonte',
+        latlong: [-43.93844109324758, -19.84796946144403],
+        url: 'https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/atencao-primaria/centro-de-saude',
+        cor: 'red'
+      },
+      {
+        id: 100,
+        descricao: 'Posto Saúde São Tomás',
+        endereco: 'Rua Santa Rosa, 54 - São Tomás',
+        cidade: 'Belo Horizonte',
+        latlong: [-43.95338323557439, -19.84499295784855],
+        url: 'https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/atencao-primaria/centro-de-saude',
+        cor: 'red'
+      },
+      {
+        id: 101,
+        descricao: 'Posto Saúde Tupi',
+        endereco: 'Rua Jorge Amado, 91',
+        cidade: 'Belo Horizonte',
+        latlong: [-43.922399807766794, -19.831598154878748],
+        url: 'https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/atencao-primaria/centro-de-saude',
+        cor: 'red'
+      },
+      {
+        id: 102,
+        descricao: 'Posto Saúde Zilah Spósito',
+        endereco: 'Rua Coquilhos, 85 - Zilah Spósito',
+        cidade: 'Belo Horizonte',
+        latlong: [-43.92806174907031, -19.8046711919358],
+        url: 'https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/atencao-primaria/centro-de-saude',
+        cor: 'red'
+      },
+      {
+        id: 103,
+        descricao: 'Posto Saúde Amílcar Vianna Martins',
+        endereco: 'Rua Nelson de Senna, 90 - Cinquentenário',
+        cidade: 'Belo Horizonte',
+        latlong: [-43.98415584721395, -19.957494694102046],
+        url: 'https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/atencao-primaria/centro-de-saude',
+        cor: 'red'
+      },
+      {
+        id: 104,
+        descricao: 'Posto Saúde Betânia',
+        endereco: 'Rua Canoas, 678 - Betânia',
+        cidade: 'Belo Horizonte',
+        latlong: [-43.995527750915976, -19.96422915453311],
+        url: 'https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/atencao-primaria/centro-de-saude',
+        cor: 'red'
+      },
+      {
+        id: 105,
+        descricao: 'Posto Saúde Cabana',
+        endereco: 'Rua Centro Social, 536 - Cabana',
+        cidade: 'Belo Horizonte',
+        latlong: [-43.99678456626672, -19.943014251284115],
+        url: 'https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/atencao-primaria/centro-de-saude',
+        cor: 'red'
+      },
+      {
+        id: 106,
+        descricao: 'Posto Saúde Camargos',
+        endereco: 'Rua Luiza Efigênia Silva, 413 (antigo 159) - Camargos',
+        cidade: 'Belo Horizonte',
+        latlong: [-44.01909269324528, -19.937622127333423],
+        url: 'https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/atencao-primaria/centro-de-saude',
+        cor: 'red'
+      },
+      {
+        id: 107,
+        descricao: 'Posto Saúde Cícero Ildefonso',
+        endereco: 'Rua Aguanil, 238 - Vista Alegre',
+        cidade: 'Belo Horizonte',
+        latlong: [-43.99792525091597, -19.954528028178515],
+        url: 'https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/atencao-primaria/centro-de-saude',
+        cor: 'red'
+      },
+      {
+        id: 108,
+        descricao: 'Posto Saúde Conjunto Betânia',
+        endereco: 'Rua Onã, 105 - Conjunto Betânia',
+        cidade: 'Belo Horizonte',
+        latlong: [-43.99501944959363, -19.964244486377616],
+        url: 'https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/atencao-primaria/centro-de-saude',
+        cor: 'red'
+      },
+      {
+        id: 109,
+        descricao: 'Posto Saúde Havaí',
+        endereco: 'Rua Paulo Diniz Carneiro, 742',
+        cidade: 'Belo Horizonte',
+        latlong: [-43.97283797790651, -19.96632644063218],
+        url: 'https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/atencao-primaria/centro-de-saude',
+        cor: 'red'
+      },
+      {
+        id: 110,
+        descricao: 'Posto Saúde João XXIII',
+        endereco: 'Rua Toledo, 481 - Vila Oeste',
+        cidade: 'Belo Horizonte',
+        latlong: [-44.00559366070644, -19.937306612184784],
+        url: 'https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/atencao-primaria/centro-de-saude',
+        cor: 'red'
+      },
+      {
+        id: 111,
+        descricao: 'Posto Saúde Noraldino de Lima',
+        endereco: 'Avenida Amazonas, 4373 - Nova Suissa',
+        cidade: 'Belo Horizonte',
+        latlong: [-43.97310879695471, -19.930233157235186],
+        url: 'https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/atencao-primaria/centro-de-saude',
+        cor: 'red'
+      },
+      {
+        id: 112,
+        descricao: 'Posto Saúde Palmeiras',
+        endereco: 'Avenida Dom João VI, 1.821 - Palmeiras',
+        cidade: 'Belo Horizonte',
+        latlong: [-43.97827997790391, -19.972040896876617],
+        url: 'https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/atencao-primaria/centro-de-saude',
+        cor: 'red'
+      },
+      {
+        id: 113,
+        descricao: 'Posto Saúde Salgado Filho',
+        endereco: 'Rua Campina Verde, 375 - Salgado Filho',
+        cidade: 'Belo Horizonte',
+        latlong: [-43.98497832208473, -19.943826506729632],
+        url: 'https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/atencao-primaria/centro-de-saude',
+        cor: 'red'
+      },
+      {
+        id: 114,
+        descricao: 'Posto Saúde Santa Maria',
+        endereco: 'Rua das Pérolas, 123 - Santa Maria',
+        cidade: 'Belo Horizonte',
+        latlong: [-44.01684829324866, -19.93304300873709],
+        url: 'https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/atencao-primaria/centro-de-saude',
+        cor: 'red'
+      },
+      {
+        id: 115,
+        descricao: 'Posto Saúde São Jorge',
+        endereco: 'Rua Oscar Trompowsky, 1.698 -  Nova Granada',
+        cidade: 'Belo Horizonte',
+        latlong: [-43.96485219139327, -19.944712861258623],
+        url: 'https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/atencao-primaria/centro-de-saude',
+        cor: 'red'
+      },
+      {
+        id: 116,
+        descricao: 'Posto Saúde Ventosa',
+        endereco: 'Rua Corcovado, 1.522 - Jardim América',
+        cidade: 'Belo Horizonte',
+        latlong: [-43.97156246256068, -19.950635630911986],
+        url: 'https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/atencao-primaria/centro-de-saude',
+        cor: 'red'
+      },
+      {
+        id: 117,
+        descricao: 'Posto Saúde Vila Imperial',
+        endereco: 'Rua Guilherme P. Fonseca, 350 - Madre Gertrudes',
+        cidade: 'Belo Horizonte',
+        latlong: [-44.00465031838137, -19.948940953836964],
+        url: 'https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/atencao-primaria/centro-de-saude',
+        cor: 'red'
+      },
+      {
+        id: 118,
+        descricao: 'Posto Saúde Vila Leonina',
+        endereco: 'Praça do Ensino, 240 - Alpes',
+        cidade: 'Belo Horizonte',
+        latlong: [-43.96541331249896, -19.955755670782356],
+        url: 'https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/atencao-primaria/centro-de-saude',
+        cor: 'red'
+      },
+      {
+        id: 119,
+        descricao: 'Posto Saúde Vista Alegre',
+        endereco: 'Rua Sêneca, 9 - Nova Cintra',
+        cidade: 'Belo Horizonte',
+        latlong: [-43.99157446256118, -19.949189433586486],
+        url: 'https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/atencao-primaria/centro-de-saude',
+        cor: 'red'
+      },
+      {
+        id: 120,
+        descricao: 'Posto Saúde Waldomiro Lobo',
+        endereco: 'Avenida Amazonas, 8.889 - Madre Gertrudes',
+        cidade: 'Belo Horizonte',
+        latlong: [-44.00520124906765, -19.945795079893887],
+        url: 'https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/atencao-primaria/centro-de-saude',
+        cor: 'red'
+      },
+      {
+        id: 121,
+        descricao: 'Posto Saúde Confisco',
+        endereco: 'Rua Policarpo de Magalhães Viotti, 261, esquina com a Avenida Clóvis Salgado, 710 - Bandeirantes',
+        cidade: 'Belo Horizonte',
+        latlong: [-44.00277921201815, -19.86373702337919],
+        url: 'https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/atencao-primaria/centro-de-saude',
+        cor: 'red'
+      },
+      {
+        id: 122,
+        descricao: 'Posto Saúde Dom Orione',
+        endereco: 'Avenida Otacílio Negrão de Lima, 2.220 - São Luiz',
+        cidade: 'Belo Horizonte',
+        latlong: [-43.97497052023031, -19.86032856709019],
+        url: 'https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/atencao-primaria/centro-de-saude',
+        cor: 'red'
+      },
+      {
+        id: 123,
+        descricao: 'Posto Saúde Itamarati',
+        endereco: 'Rua Anita Blumberg, 63 - Paquetá',
+        cidade: 'Belo Horizonte',
+        latlong: [-43.98779042022949, -19.868196634849696],
+        url: 'https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/atencao-primaria/centro-de-saude',
+        cor: 'red'
+      },
+      {
+        id: 124,
+        descricao: 'Posto Saúde Jardim Alvorada',
+        endereco: 'Rua Engenho do Sol, 580 - Engenho Nogueira',
+        cidade: 'Belo Horizonte',
+        latlong: [-43.98366067975617, -19.89385125120182],
+        url: 'https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/atencao-primaria/centro-de-saude',
+        cor: 'red'
+      },
+      {
+        id: 125,
+        descricao: 'Posto Saúde Ouro Preto',
+        endereco: 'Rua Jonas Jean, 77 - Ouro Preto',
+        cidade: 'Belo Horizonte',
+        latlong: [-43.987589850919, -19.88507362803854],
+        url: 'https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/atencao-primaria/centro-de-saude',
+        cor: 'red'
+      },
+      {
+        id: 126,
+        descricao: 'Posto Saúde Padre Joaquim Maia',
+        endereco: 'Rua Boaventura, 1.900 - Liberdade',
+        cidade: 'Belo Horizonte',
+        latlong: [-43.954693381610774, -19.855511824467428],
+        url: 'https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/atencao-primaria/centro-de-saude',
+        cor: 'red'
+      },
+      {
+        id: 127,
+        descricao: 'Posto Saúde Padre Tiago',
+        endereco: 'Avenida João XXIII,  1.233 -  Alípio de Melo',
+        cidade: 'Belo Horizonte',
+        latlong: [-43.993904266265105, -19.900535336864404],
+        url: 'https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/atencao-primaria/centro-de-saude',
+        cor: 'red'
+      },
+      {
+        id: 128,
+        descricao: 'Posto Saúde Santa Amélia',
+        endereco: 'Rua Antero de Quental, 185 - Santa Branca',
+        cidade: 'Belo Horizonte',
+        latlong: [-43.967026279757754, -19.837478748780207],
+        url: 'https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/atencao-primaria/centro-de-saude',
+        cor: 'red'
+      },
+      {
+        id: 129,
+        descricao: 'Posto Saúde Santa Rosa',
+        endereco: 'Avenida Bueno Siqueira, 100 - Universitário',
+        cidade: 'Belo Horizonte',
+        latlong: [-43.943523629319536, -19.866475705804337],
+        url: 'https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/atencao-primaria/centro-de-saude',
+        cor: 'red'
+      },
+      {
+        id: 130,
+        descricao: 'Posto Saúde Santa Rosa (anexo)',
+        endereco: 'Rua Otis, 60 - Suzana',
+        cidade: 'Belo Horizonte',
+        latlong: [-43.933116035576724, -19.864328371667177],
+        url: 'https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/atencao-primaria/centro-de-saude',
+        cor: 'red'
+      },
+      {
+        id: 131,
+        descricao: 'Posto Saúde Santa Terezinha',
+        endereco: 'Rua Senador Virgílio Távora, 157 - Santa Terezinha',
+        cidade: 'Belo Horizonte',
+        latlong: [-44.00686832393579, -19.874517775091338],
+        url: 'https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/atencao-primaria/centro-de-saude',
+        cor: 'red'
+      },
+      {
+        id: 132,
+        descricao: 'Posto Saúde São Francisco',
+        endereco: 'Rua Viana do Castelo, 485 - São Francisco',
+        cidade: 'Belo Horizonte',
+        latlong: [-43.95326182023153, -19.876588896040882],
+        url: 'https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/atencao-primaria/centro-de-saude',
+        cor: 'red'
+      },
+      {
+        id: 133,
+        descricao: 'Posto Saúde São José',
+        endereco: 'Rua Violeta de Melo, 655 - São José',
+        cidade: 'Belo Horizonte',
+        latlong: [-43.99885510488848, -19.900202560106727],
+        url: 'https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/atencao-primaria/centro-de-saude',
+        cor: 'red'
+      },
+      {
+        id: 134,
+        descricao: 'Posto Saúde Serrano',
+        endereco: 'Rua Tocantins, 471 - Serrano',
+        cidade: 'Belo Horizonte',
+        latlong: [-44.0096853183802, -19.884417216330167],
+        url: 'https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/atencao-primaria/centro-de-saude',
+        cor: 'red'
+      },
+      {
+        id: 135,
+        descricao: 'Posto Saúde Trevo',
+        endereco: 'Rua Carlos Lacerda, 1.010 - Trevo',
+        cidade: 'Belo Horizonte',
+        latlong: [-44.00690847790416, -19.832793073274534],
+        url: 'https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/atencao-primaria/centro-de-saude',
+        cor: 'red'
+      },
+      {
+        id: 136,
+        descricao: 'Posto Saúde Alameda dos Ipês',
+        endereco: 'Rua  Ministro Oliveira Salazar, 1.186 - Santa Mônica',
+        cidade: 'Belo Horizonte',
+        latlong: [-43.97394017975671, -19.817596964237033],
+        url: 'https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/atencao-primaria/centro-de-saude',
+        cor: 'red'
+      },
+      {
+        id: 137,
+        descricao: 'Posto Saúde Andradas',
+        endereco: 'Rua Mariana Amélia de Azevedo, 21 - São João Batista',
+        cidade: 'Belo Horizonte',
+        latlong: [-43.96306109324538, -19.81958622048874],
+        url: 'https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/atencao-primaria/centro-de-saude',
+        cor: 'red'
+      },
+      {
+        id: 138,
+        descricao: 'Posto Saúde Céu Azul',
+        endereco: 'Rua Alice Marques, 187 - Céu Azul',
+        cidade: 'Belo Horizonte',
+        latlong: [-43.998528988115034, -19.81945125331078],
+        url: 'https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/atencao-primaria/centro-de-saude',
+        cor: 'red'
+      },
+      {
+        id: 139,
+        descricao: 'Posto Saúde Copacabana',
+        endereco: 'Rua Inglaterra, 940 - Copacabana',
+        cidade: 'Belo Horizonte',
+        latlong: [-43.98617919510274, -19.834100344698673],
+        url: 'https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/atencao-primaria/centro-de-saude',
+        cor: 'red'
+      },
+      {
+        id: 140,
+        descricao: 'Posto Saúde Jardim Comerciários',
+        endereco: 'Rua Maria da Paz Maia, 168 - Jardim Comerciários',
+        cidade: 'Belo Horizonte',
+        latlong: [-43.975868606735425, -19.78778499821338],
+        url: 'https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/atencao-primaria/centro-de-saude',
+        cor: 'red'
+      },
+      {
+        id: 141,
+        descricao: 'Posto Saúde Jardim Comerciários (anexo)',
+        endereco: 'Rua Jair Negrão de Lima, 1058 - Novo Letícia',
+        cidade: 'Belo Horizonte',
+        latlong: [-43.97517935092246, -19.79863575897808],
+        url: 'https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/atencao-primaria/centro-de-saude',
+        cor: 'red'
+      },
+      {
+        id: 142,
+        descricao: 'Posto Saúde Jardim Europa',
+        endereco: 'Rua Edimburgo, 140 - Jardim Europa',
+        cidade: 'Belo Horizonte',
+        latlong: [-43.96705689324844, -19.800156936562857],
+        url: 'https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/atencao-primaria/centro-de-saude',
+        cor: 'red'
+      },
+      {
+        id: 143,
+        descricao: 'Posto Saúde Jardim Leblon',
+        endereco: 'Rua Coronel Antônio Lopes Coelho, 269 - Jardim Leblon',
+        cidade: 'Belo Horizonte',
+        latlong: [-43.98760832208328, -19.82557647689953],
+        url: 'https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/atencao-primaria/centro-de-saude',
+        cor: 'red'
+      },
+      {
+        id: 144,
+        descricao: 'Posto Saúde Lagoa',
+        endereco: 'Rua José Sabino Maciel, 176 - Lagoa',
+        cidade: 'Belo Horizonte',
+        latlong: [-44.001089933725545, -19.80917363274426],
+        url: 'https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/atencao-primaria/centro-de-saude',
+        cor: 'red'
+      },
+      {
+        id: 145,
+        descricao: 'Posto Saúde Minas Caixa',
+        endereco: 'Rua Capitão Sérgio Pires, 226 - Minas Caixa',
+        cidade: 'Belo Horizonte',
+        latlong: [-43.95784303742799, -19.805198134648894],
+        url: 'https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/atencao-primaria/centro-de-saude',
+        cor: 'red'
+      },
+      {
+        id: 146,
+        descricao: 'Posto Saúde Nova York',
+        endereco: 'Rua Wilton Marques Pereira, 10 - Nova York',
+        cidade: 'Belo Horizonte',
+        latlong: [-43.96728592023394, -19.793653811081487],
+        url: 'https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/atencao-primaria/centro-de-saude',
+        cor: 'red'
+      },
+      {
+        id: 147,
+        descricao: 'Posto Saúde Paraúna',
+        endereco: 'Rua João Ferreira da Silva, 248 - Mantiqueira',
+        cidade: 'Belo Horizonte',
+        latlong: [-43.98902755388339, -19.80070273123025],
+        url: 'https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/atencao-primaria/centro-de-saude',
+        cor: 'red'
+      },
+      {
+        id: 148,
+        descricao: 'Posto Saúde Piratininga',
+        endereco: 'Rua Cravo da Índia, 11 - Piratininga',
+        cidade: 'Belo Horizonte',
+        latlong: [-43.99268333372663, -19.816138042465035],
+        url: 'https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/atencao-primaria/centro-de-saude',
+        cor: 'red'
+      },
+      {
+        id: 149,
+        descricao: 'Posto Saúde Rio Branco',
+        endereco: 'Rua Crisanto Muniz, 120 - Rio Branco',
+        cidade: 'Belo Horizonte',
+        latlong: [-43.980234701182326, -19.81561966500215],
+        url: 'https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/atencao-primaria/centro-de-saude',
+        cor: 'red'
+      },
+      {
+        id: 150,
         descricao: 'Posto Tia Amância',
         endereco: 'Rua Iraí, 248 - Coração de Jesus',
         cidade: 'Belo Horizonte',
@@ -735,7 +1458,7 @@
       }
     ]
 
-    // Cria o mapa e adiciona no elemento de id: map 
+    // Início do mapa de exibição
     const centralLatLong = [-43.9397233, -19.9332786]
 
     // Token adiocionado
@@ -744,10 +1467,9 @@
       container: 'map',
       style: 'mapbox://styles/mapbox/streets-v12',
       center: centralLatLong,
-      zoom: 9
+      zoom: 11
     });
 
-    // Adiciona marcadores para os postos de saúde
     postos.forEach((uni) => {
       let popup = new mapboxgl.Popup({offset: 25})
         .setHTML(`<h3><a href="${uni.url}" target="_blank">${uni.descricao}</a></h3><br>
@@ -758,7 +1480,6 @@
         .addTo(map);
     })
 
-    // Adiciona marcadores para os postos de saúde
     function processarGeo(local) {
       let popup = new mapboxgl.Popup({offset: 25})
         .setHTML(`<h3> Estou aqui!!! </h3>`);
@@ -768,7 +1489,7 @@
         .addTo(map);
     }
 
-    navigator.geolocation.getCurrentPosition(processarGeo, () => {alert('Erro ao obter localização.')})
+   // navigator.geolocation.getCurrentPosition(processarGeo, () => {alert('Erro ao obter localização.')})
 
   </script>
   <script type="text/javascript" src="script.js"></script>
