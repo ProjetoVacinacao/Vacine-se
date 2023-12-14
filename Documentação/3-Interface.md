@@ -9,7 +9,7 @@ Abaixo o protótipo representando o design de interface.
 
 ## Tela Inicial
 
-![UserFlow](images/telainical.png)
+![UserFlow](images/telainicial.png)
 
 ## Tela de Login
 
