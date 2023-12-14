@@ -21,12 +21,12 @@ function readVacina(processaDados) {
 var menuItem = document.querySelectorAll('.item-menu');
 
 function selectionLink() {
-    menuItem.forEach(function(item) {
-        item.classList.remove('ativo');
-    });
-    this.classList.add('ativo');
+  menuItem.forEach(function(item) {
+    item.classList.remove('ativo');
+  });
+  this.classList.add('ativo');
 }
 
 menuItem.forEach(function(item) {
-    item.addEventListener('click', selectionLink);
+  item.addEventListener('click', selectionLink);
 });
