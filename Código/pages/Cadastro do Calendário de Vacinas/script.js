@@ -113,7 +113,7 @@ month_names.forEach((e, index) => {
   };
 });
 
-(function () {
+(function() {
   month_list.classList.add('hideonce');
 })();
 
