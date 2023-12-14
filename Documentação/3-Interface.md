@@ -19,9 +19,9 @@ Abaixo o protótipo representando o design de interface.
 
 ![UserFlow](images/telacadastro.png)
 
-## Tela Cartão Vacina
+## Tela Cartão Nacional de Vacina
 
-![UserFlow](images/CalendarioVacina.png)
+![UserFlow](images/carteiravacinacao.png)
 
 ## Tela Calendário Vacina
 
