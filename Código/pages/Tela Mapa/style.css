@@ -3,28 +3,25 @@
 * {
   margin: 0;
   padding: 0;
+  border: 0;
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 100%;
 }
 
 body {
-  height: 100vh;
+  height: 100%;
 }
 
-.mapa {
-  width: 333%;
-  height: 400px;
+h1 {
+  font-size: 24px;
 }
+
 
 nav.menu-lateral {
-  width: 100px;
   height: 100%;
   background-color: #ffffff;
-  /*cor da parte lateral*/
-  padding: 5px 0 40px;
-  border: solid 1px black;
-  /*box-shadow: 1px 0 0 #000000;*/
-  /*borda fina*/
+  box-shadow: 0 0 0 1px #000000;
   position: fixed;
   top: 0;
   left: 0;
@@ -106,7 +103,7 @@ td {
 
 th,
 td {
-  padding: 12px;
+  padding: 10px;
   text-align: left;
 }
 
@@ -115,3 +112,37 @@ th {
 }
 
 /*Final estilização tabela*/
+
+/*Campo de pesquisa */
+.campo-pesquisa {
+  width: 200px;
+  padding: 8px;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+/*Alinhamento*/
+
+.titulo {
+  margin-left: 100px;
+}
+
+/*Tamanho mapa*/
+.mapa {
+  width: 1220px;
+  height: 400px;
+  margin-left: 60px;
+}
+
+.contatostabela {
+  margin-left: 60px;
+}
+
+.campo-pesquisa {
+  margin-left: 60px;
+}
+
+.titulo {
+  margin-left: 120px;
+}
