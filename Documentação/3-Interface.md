@@ -9,7 +9,7 @@ Abaixo o protótipo representando o design de interface.
 
 ## Tela Inicial
 
-![UserFlow](images/Capa.png)
+![UserFlow](images/telainical.png)
 
 ## Tela de Login
 
@@ -31,9 +31,9 @@ Abaixo o protótipo representando o design de interface.
 
 ![UserFlow](images/postosdesaude.png)
 
-## Tela Tabela das Idades
+## Tela Calendário de Idades da Vacina
 
-![UserFlow](images/TelaIdades.png)
+![UserFlow](images/calendarioidades.png)
 
 ## Tela Lembretes de Vacinação
 
