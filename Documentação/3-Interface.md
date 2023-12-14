@@ -25,7 +25,7 @@ Abaixo o protótipo representando o design de interface.
 
 ## Tela Calendário Vacina
 
-![UserFlow](images/TelaVacina.png)
+![UserFlow](images/calendario.png)
 
 ## Tela Mapa
 
