@@ -1,44 +1,79 @@
-function addCad() {
-    const firstname = document.getElementById('firstname').value;
-    const lastname = document.getElementById('lastname').value;
-    const data = document.getElementById('data').value;
-    const cpf = document.getElementById('cpf').value;
-    const number = document.getElementById('number').value;
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
-    const confirmpassword = document.getElementById('confirmpassword').value;
-
-    if (password !== confirmpassword) {
-        alert('As senhas não coincidem. Por favor, tente novamente.');
-        return; // Evite o cadastro se as senhas não coincidirem.
-    }
-
-    const cad = {
-        firstname,
-        lastname,
-        data,
-        cpf,
-        number,
-        email,
-        password,
-        confirmpassword
-    };
-
-    let cadastro = JSON.parse(localStorage.getItem('cadastro')) || [];
-    cadastro.push(cad);
+cad
+const UserManager = {
+  cadastrarUsuario: function(usuario) {
+    const cadastro = JSON.parse(localStorage.getItem('cadastro')) || [];
+    cadastro.push(usuario);
     localStorage.setItem('cadastro', JSON.stringify(cadastro));
+  },
 
-    // Exibe uma mensagem de sucesso
-    alert('Cadastro realizado com sucesso!');
-    document.getElementById('cad-form').reset();
+  fazerLogin: function(username, password) {
+    const cadastros = JSON.parse(localStorage.getItem('cadastro')) || [];
+    const usuarioEncontrado = cadastros.find(c => c.cpf === username && c.password === password);
+
+    if (usuarioEncontrado) {
+      sessionStorage.setItem('usuarioAtual', JSON.stringify(usuarioEncontrado));
+      alert('Bem-vindo, ' + usuarioEncontrado.firstname + '!');
+    } else {
+      alert('Credenciais inválidas. Tente novamente.');
+    }
+  }
+};
+
+function addCad() {
+  const firstname = document.getElementById('firstname').value;
+  const lastname = document.getElementById('lastname').value;
+  const data = document.getElementById('data').value;
+  const cpf = document.getElementById('cpf').value;
+  const number = document.getElementById('number').value;
+  const email = document.getElementById('email').value;
+  const password = document.getElementById('password').value;
+  const confirmpassword = document.getElementById('confirmpassword').value;
+
+  if (password !== confirmpassword) {
+    alert('As senhas não coincidem. Por favor, tente novamente.');
+    return; // Evite o cadastro se as senhas não coincidirem.
+  }
+
+  const cad = {
+    firstname,
+    lastname,
+    data,
+    cpf,
+    number,
+    email,
+    password,
+    confirmpassword
+  };
+
+  let cadastro = JSON.parse(localStorage.getItem('cadastro')) || [];
+  cadastro.push(cad);
+  localStorage.setItem('cadastro', JSON.stringify(cadastro));
+
+  // Exibe uma mensagem de sucesso
+  alert('Cadastro realizado com sucesso!');
+  document.getElementById('cad-form').reset();
+  showdata();
+  UserManager.cadastrarUsuario(cad);
   showdata();
 }
-function showdata(){
-  var mostrar=JSON.parse(localStorage.getItem('cadastro') ) || []
-  var html=``;
 
-  mostrar.forEach((element,index)=> {
-    html+=`nome:${element.firstname}<br>
+function entrarUsuario() {
+  const cpf = document.getElementById('username').value;
+  const senha = document.getElementById('password').value;
+
+  console.log('CPF digitado:', cpf);
+  console.log('Senha digitada:', senha);
+
+  UserManager.fazerLogin(cpf, senha);
+}
+
+
+function showdata() {
+  var mostrar = JSON.parse(localStorage.getItem('cadastro')) || []
+  var html = ``;
+
+  mostrar.forEach((element, index) => {
+    html += `nome:${element.firstname}<br>
     sobrenome:${element.lastname}<br>
     data de nascimento:${element.data}<br>
     cpf:${element.cpf}<br>
@@ -50,22 +85,22 @@ function showdata(){
 
   });
 
-  document.getElementById("itens").innerHTML=html;  
+  document.getElementById("itens").innerHTML = html;
 }
 
-window.onload=showdata();
+window.onload = showdata();
 
-function deletedata(index){
-var dados;
-if(localStorage.getItem("cadastro")==null){
-  dados=[];
+function deletedata(index) {
+  var dados;
+  if (localStorage.getItem("cadastro") == null) {
+    dados = [];
 
-}
-else{
-  dados=JSON.parse(localStorage.getItem("cadastro"))
-}
-  dados.splice(index,1);
-  localStorage.setItem("cadastro",JSON.stringify(dados))
+  }
+  else {
+    dados = JSON.parse(localStorage.getItem("cadastro"))
+  }
+  dados.splice(index, 1);
+  localStorage.setItem("cadastro", JSON.stringify(dados))
 
   showdata();
 }
