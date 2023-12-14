@@ -41,4 +41,4 @@ Abaixo o protótipo representando o design de interface.
 
 ## Protótipo Funcional
 
-https://www.figma.com/proto/4vZZWtUEvidUXMqIyMV8F1/Dashboard-Student-Activities-(Community)?type=design&node-id=313-10&t=AZBVirHhOmvtKzBn-1&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=313%3A10&mode=design
+[https://www.figma.com/proto/4vZZWtUEvidUXMqIyMV8F1/Dashboard-Student-Activities-(Community)?type=design&node-id=399-56&t=rNjzE62sb8CsPtMf-1&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=313%3A21&mode=design
