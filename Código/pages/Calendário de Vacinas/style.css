@@ -1,22 +1,44 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
 
-* {
-  margin: 0;
-  padding: 0;
-  border: 0;
+body {
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
 }
 
 h1 {
   font-size: 24px;
+
+}
+
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+  color: white;
+  border: none;
+  background-color: #87CEFA;
+  font-size: 17px;
+  cursor: pointer;
 }
 
 body {
-  height: 100%;
+  font-family: Arial, sans-serif;
+  display: flex;
 }
-
 
 nav.menu-lateral {
   width: 100px;
@@ -107,421 +129,34 @@ body {
   box-sizing: border-box;
 }
 
-
-body {
-  place-items: center;
-  font-family: var(--font-family);
-  background-color: white;
-  overflow: hidden;
-}
-
-.calendar-header {
-  background-color: #87CEFA;
-}
-
-.calendar-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  /* Ajuste a altura conforme necessário */
-}
-
 .container {
-  margin: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}
-
-.calendar {
-  width: 100%;
-  /* Ajuste a largura conforme necessário */
-  height: 610px;
-  background-color: white;
-  border-radius: 25px;
-  overflow: hidden;
-  padding: 30px 50px 0px 50px;
-  text-align: center;
-  box-shadow: var(--shadow);
-  transition: all 0.3s ease-in-out;
-  /* Adicione uma transição suave */
-}
-
-.showReminders .calendar {
-  height: 400px;
-  /* Ajuste a altura conforme necessário */
-  overflow-y: auto;
-  /* Adicione uma barra de rolagem quando necessário */
-}
-
-.calendar-header {
-  background: #87CEFA;
-  ;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-weight: 700;
-  color: var(--white);
-  padding: 10px;
-}
-
-.calendar-body {
-  pad: 10px;
-}
-
-.calendar-week-days {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  font-weight: 600;
-  cursor: pointer;
-  color: rgb(104, 104, 104);
-}
-
-.calendar-week-days div:hover {
-  color: black;
-  transform: scale(1.2);
-  transition: all .2s ease-in-out;
-}
-
-.calendar-week-days div {
-  display: grid;
-  place-items: center;
-  color: var(--bg-second);
-  height: 50px;
-}
-
-.calendar-days {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 2px;
-  color: var(--color-txt);
-}
-
-.calendar-days div {
-  width: 37px;
-  height: 33px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 5px;
-  position: relative;
-  cursor: pointer;
-  animation: to-top 1s forwards;
-}
-
-.month-picker {
-  padding: 5px 10px;
-  border-radius: 10px;
-  cursor: pointer;
-}
-
-.month-picker:hover {
-  background-color: var(--color-hover);
-}
-
-.month-picker:hover {
-  color: var(--color-txt);
-}
-
-.year-picker {
-  display: flex;
-  align-items: center;
-}
-
-.year-change {
-  height: 30px;
-  width: 30px;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  margin: 0px 10px;
-  cursor: pointer;
-}
-
-.year-change:hover {
-  background-color: var(--light-btn);
-  transition: all .2s ease-in-out;
-  transform: scale(1.12);
-}
-
-.year-change:hover pre {
-  color: var(--bg-body);
-}
-
-.calendar-footer {
-  padding: 10px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-#year:hover {
-  cursor: pointer;
-  transform: scale(1.2);
-  transition: all 0.2 ease-in-out;
-}
-
-.calendar-days div span {
-  position: absolute;
-}
-
-.calendar-days div:hover {
-  transition: width 0.2s ease-in-out, height 0.2s ease-in-out;
-  background-color: #fbc7d4;
-  border-radius: 20%;
-  color: var(--dark-text);
-}
-
-.calendar-days div.current-date {
-  color: var(--dark-text);
-  background-color: var(--light-btn);
-  border-radius: 20%;
-}
-
-.month-list {
-  position: relative;
-  left: 0;
-  top: -50px;
-  background-color: #ebebeb;
-  color: var(--light-text);
-  display: grid;
-  grid-template-columns: repeat(3, auto);
-  gap: 5px;
-  border-radius: 20px;
-}
-
-.month-list>div {
-  display: grid;
-  place-content: center;
-  margin: 5px 10px;
-  transition: all 0.2s ease-in-out;
-}
-
-.month-list>div>div {
-  border-radius: 15px;
-  padding: 10px;
-  cursor: pointer;
-}
-
-.month-list>div>div:hover {
-  background-color: var(--light-btn);
-  color: var(--dark-text);
-  transform: scale(0.9);
-  transition: all 0.2s ease-in-out;
-}
-
-.month-list.show {
-  visibility: visible;
-  pointer-events: visible;
-  transition: 0.6s ease-in-out;
-  animation: to-left .71s forwards;
-}
-
-.month-list.hideonce {
-  visibility: hidden;
-}
-
-.month-list.hide {
-  animation: to-right 1s forwards;
-  visibility: none;
-  pointer-events: none;
-}
-
-.date-time-formate {
-  width: max-content;
-  height: max-content;
-  font-family: Dubai Light, Century Gothic;
-  position: relative;
-  display: inline;
-  top: 140px;
-  justify-content: center;
-}
-
-.day-text-formate {
-  font-family: Microsoft JhengHei UI;
-  font-size: 1.4rem;
-  padding-right: 5%;
-  border-right: 3px solid #87CEFA;
-  position: absolute;
-  left: -1rem;
-}
-
-.date-time-value {
-  display: block;
-  height: max-content;
-  width: max-content;
-  position: relative;
-  left: 40%;
-  top: -18px;
   text-align: center;
 }
 
-.time-formate {
-  font-size: 1.5rem;
+table {
+  width: 80%;
+  border-collapse: collapse;
+  margin: 20px auto;
 }
 
-.time-formate.hideTime {
-  animation: hidetime 1.5s forwards;
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
 }
 
-.day-text-formate.hidetime {
-  animation: hidetime 1.5s forwards;
-}
-
-.date-formate.hideTime {
-  animation: hidetime 1.5s forwards;
-}
-
-.day-text-formate.showtime {
-  animation: showtime 1s forwards;
-}
-
-.time-formate.showtime {
-  animation: showtime 1s forwards;
-}
-
-.date-formate.showtime {
-  animation: showtime 1s forwards;
-}
-
-@keyframes to-top {
-  0% {
-    transform: translateY(0);
-    opacity: 0;
-  }
-
-  100% {
-    transform: translateY(100%);
-    opacity: 1;
-  }
-}
-
-@keyframes to-left {
-  0% {
-    transform: translatex(230%);
-    opacity: 1;
-  }
-
-  100% {
-    transform: translatex(0);
-    opacity: 1;
-  }
-}
-
-@keyframes to-right {
-  10% {
-    transform: translatex(0);
-    opacity: 1;
-  }
-
-  100% {
-    transform: translatex(-150%);
-    opacity: 1;
-  }
-}
-
-@keyframes showtime {
-  0% {
-    transform: translatex(250%);
-    opacity: 1;
-  }
-
-  100% {
-    transform: translatex(0%);
-    opacity: 1;
-  }
-}
-
-@keyframes hidetime {
-  0% {
-    transform: translatex(0%);
-    opacity: 1;
-  }
-
-  100% {
-    transform: translatex(-370%);
-    opacity: 1;
-  }
-}
-
-@media (max-width:375px) {
-  .month-list>div {
-
-    margin: 5px 0px;
-  }
-}
-
-/* Adicione ao seu estilo CSS existente */
-.calendar-days div.selected-date {
+th {
   background-color: #87CEFA;
-  border-radius: 20%;
-  color: #fff;
-}
-
-.selected-day-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-}
-
-.selected-day-info .search-container {
-  margin-top: 10px;
-}
-
-.calendar-footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 50px;
-}
-
-.calendar-footer button {
-  margin-top: 10px;
-}
-
-.showReminders button {
-  margin-right: 20px;
-}
-
-.espacamento {
-  padding: 30px;
-}
-
-.calendar-header {
-  background-color: #87CEFA;
-  /* Cor de fundo azul */
   color: white;
-  /* Cor do texto branca */
-  padding: 10px;
-  /* Espaçamento interno */
-  text-align: center;
-  /* Alinhamento centralizado */
-  font-size: 18px;
-  /* Tamanho da fonte */
-  font-weight: bold;
-  /* Negrito */
 }
-
-.current-date {
-  background-color: #87CEFA;
-  ;
-  color: #87CEFA;
-  ;
-}
-
-/* Adicione ao seu estilo CSS existente */
 
 .button-container {
-  margin-top: 5px;
-  /* Reduza a margem superior conforme necessário */
-  margin-left: 100px;
-  /* Ajuste a margem à esquerda conforme necessário */
+  margin-top: 20px;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  /* Adicione esta linha para centralizar os botões horizontalmente */
+  align-items: center;
+  /* Adicione esta linha para centralizar os botões verticalmente */
 }
 
 .button-container button {
@@ -530,13 +165,9 @@ body {
   padding: 10px 20px;
   border: none;
   cursor: pointer;
-  margin-bottom: 5px;
-  /* Reduza a margem inferior conforme necessário */
+  margin-right: 10px;
+  /* Espaçamento entre os botões */
 }
-
-
-
-
 
 .button-container button:disabled {
   background-color: #d3d3d3;
@@ -547,94 +178,87 @@ body {
   background-color: #6495ED;
 }
 
-.table-container {
-  margin-top: 20px;
-  margin-left: 0;
-  /* Ajuste a margem à esquerda conforme necessário */
-}
 
-table {
-  width: 100%;
+/* Adicione este trecho para a tabela da tela de cadastrar vacinas */
+#tabela-cadastrar-vacinas {
+  width: 80%;
   border-collapse: collapse;
-  margin-top: 10px;
+  margin: 20px auto;
 }
 
-th,
-td {
-  border: 1px solid #87CEFA;
+#tabela-cadastrar-vacinas th,
+#tabela-cadastrar-vacinas td {
+  border: none;
+  /* Remova a borda */
   padding: 8px;
-  text-align: left;
 }
 
-th {
+#tabela-cadastrar-vacinas th {
   background-color: #87CEFA;
   color: white;
 }
 
-.table-container {
-  margin-top: 10px;
-  /* Ajuste a margem superior conforme necessário */
-  margin-left: 0;
-  /* Remova ou ajuste a margem à esquerda conforme necessário */
+.container {
+  position: relative;
 }
 
 #remindersTable {
-  width: calc(100% - 100px);
-  /* Ajuste conforme necessário para acomodar a largura do calendário e da margem à esquerda dos botões */
-  border-collapse: collapse;
+  margin-top: 60px;
+  /* Margem superior para evitar que a tabela seja sobreposta pelo h1 fixo */
 }
-
-#remindersTable th,
-#remindersTable td {
-  border: 1px solid #ddd;
-  padding: 8px;
-  text-align: left;
-}
-
-#remindersTable th {
-  background-color: #87CEFA;
-  color: white;
-}
-
-.show-reminders .table-container {
-  margin-left: 50px;
-  /* Ajuste a margem conforme necessário */
-}
-
-.show-reminders .calendar {
-  width: 100%;
-  /* Ajuste a largura conforme necessário */
-}
-
-
 
 .titulo {
-  margin-left: 105px;
-  margin-bottom: 700px;
+  text-align: left;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  margin-left: 100px;
 }
 
-h1 {
-  font-size: 20px;
 
+.containerPesquisas {
+  display: flex;
+  align-items: flex-start;
+  width: 80%;
+  margin-bottom: 20px;
 }
 
-.linhaseparadora {
-  width: calc(100% + 60rem);
-  /* Adiciona uma margem extra de 2rem para compensar as margens padrão */
-  margin-left: -1rem;
-  /* Compensa a margem esquerda padrão */
+.filtro-container {
+  width: 30%;
+  /* Ajuste conforme necessário */
+  margin-right: 10px;
+  /* Adicione margem entre o filtro e o campo de texto */
 }
 
-.calendar-text-input {
-    border: 1px solid #000; /* Define a borda do campo de texto preta */
-    padding: 8px; /* Adiciona um preenchimento interno ao campo de texto */
-    border-radius: 4px; /* Adiciona bordas arredondadas ao campo de texto */
-    margin-bottom: 1rem; /* Adiciona um espaço na parte inferior do campo de texto */
+.divSearch {
+  flex-grow: 1;
+  /* Ocupa o restante do espaço disponível */
+  margin-right: 10px;
+  /* Adicione margem entre o campo de texto e o botão de pesquisa */
 }
 
-#reminderInput {
-    border: 1px solid #000; /* Define a borda do campo de texto preta */
-    padding: 8px; /* Adiciona um preenchimento interno ao campo de texto */
-    border-radius: 4px; /* Adiciona bordas arredondadas ao campo de texto */
-    margin-bottom: 1rem; /* Adiciona um espaço na parte inferior do campo de texto */
+button {
+  background-color: #87CEFA;
+  color: white;
+  padding: 5px 10px;
+  /* Ajuste o valor conforme necessário para aumentar o tamanho do botão */
+  font-size: 10x;
+  /* Ajuste o valor conforme necessário para diminuir o tamanho do texto */
+  border: none;
+  cursor: pointer;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.button-container button:disabled {
+  background-color: #d3d3d3;
+  cursor: not-allowed;
+}
+
+.button-container button:hover {
+  background-color: #6495ED;
 }
