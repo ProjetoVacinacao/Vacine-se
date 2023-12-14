@@ -4,19 +4,30 @@
 * {
   margin: 0;
   padding: 0;
+  border: 0;
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 100%;
 }
 
+h1 {
+  font-size: 24px;
+}
+
+
 body {
-  height: 100vh;
+  height: 100%;
 }
 
 nav.menu-lateral {
   width: 100px;
   height: 100%;
-  background-color: #ffffff;/cor da parte lateral/ padding: 5px 0 40px;
-  box-shadow: 1px 0 0 #000000;/borda fina/ position: fixed;
+  background-color: #ffffff;
+  /*cor da parte lateral*/
+  padding: 5px 0 40px;
+  box-shadow: 1px 0 0 #000000;
+  /*borda fina*/
+  position: fixed;
   top: 0;
   left: 0;
 }
@@ -46,7 +57,8 @@ ul li.ativo {
 }
 
 ul li.item-menu:hover {
-  background-color: #87CEFA;/muda a cor de quando passa o mouse/
+  background-color: #87CEFA;
+  /*muda a cor de quando passa o mouse*/
 }
 
 ul li.item-menu a {
@@ -126,221 +138,233 @@ h {
 }
 
 footer {
-  background-color: cadetblue;
-  color: blanchedalmond;
+  background-color: #87CEFA;
+  color: white;
   text-align: center;
   padding: 10px 0;
+}
 
-  /* Estilizando o botão de voltar */
-  button#voltar {
-    background-color: #3498db;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    /* Borda arredondada */
-    padding: 10px 20px;
-    /* Espaçamento interno do botão */
-    cursor: pointer;
-    /* Cursor de mão ao passar o mouse */
-    transition: background-color 0.3s;
-    /* Efeito de transição suave na cor de fundo */
-  }
+/* Estilizando o botão de voltar */
+button#voltar {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  /* Borda arredondada */
+  padding: 10px 20px;
+  /* Espaçamento interno do botão */
+  cursor: pointer;
+  /* Cursor de mão ao passar o mouse */
+  transition: background-color 0.3s;
+  /* Efeito de transição suave na cor de fundo */
+}
 
-  /* Estilo do botão de voltar quando focado */
-  button#voltar:focus {
-    background-color: #1565C0;
-  }
+/* Estilo do botão de voltar quando focado */
+button#voltar:focus {
+  background-color: #1565C0;
+}
 
-  @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
-
-
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-
-  body {
-    height: 100vh;
-  }
-
-  nav.menu-lateral {
-    width: 100px;
-    height: 100%;
-    background-color: #ffffff;/cor da parte lateral/ padding: 5px 0 40px;
-    box-shadow: 1px 0 0 #000000;/borda fina/ position: fixed;
-    top: 0;
-    left: 0;
-  }
-
-  .btn-expandir {
-    width: 100%;
-    padding-left: 10%;
-  }
-
-  .btn-expandir {
-    color: rgb(71, 124, 171);
-    font-size: 24px;
-    cursor: pointer;
-  }
-
-  ul {
-    height: 100px;
-    list-style-type: none;
-  }
-
-  ul li.item-menu {
-    transition: .2s;
-  }
-
-  ul li.ativo {
-    background-color: #87CEFA;
-  }
-
-  ul li.item-menu:hover {
-    background-color: #87CEFA;/muda a cor de quando passa o mouse/
-  }
-
-  ul li.item-menu a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 20px;
-    padding: 20px 4%;
-    display: flex;
-    margin-bottom: 20px;
-    line-height: 40px;
-  }
-
-  ul li.item-menu a .txt-link {
-    margin-left: 40px;
-  }
-
-  ul li.item-menu a .icon {
-    margin-left: 40px;
-  }
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
 
 
-  .icon {
-    color: rgb(0, 0, 0);
-    /* cor dos ícones*/
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-  /* Estilos CSS para a imagem da tabela */
-  table {
-    border-collapse: collapse;
-    width: 100%;
-    /* Largura da tabela */
-  }
+body {
+  height: 100vh;
+}
 
-  table img {
-    padding: 20px;
-    margin-left: 100px;
-  }
+nav.menu-lateral {
+  width: 100px;
+  height: 100%;
+  background-color: #ffffff;
+  /*cor da parte lateral*/
+  padding: 5px 0 40px;
+  box-shadow: 1px 0 0 #000000;
+  /*borda fina*/
+  position: fixed;
+  top: 0;
+  left: 0;
+}
 
-  #searchContainer {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    border: 1px solid #ccc;
-    border-radius: 25px;
-    padding: 5px 10px;
-    background-color: #fff;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  }
+.btn-expandir {
+  width: 100%;
+  padding-left: 10%;
+}
 
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    margin: 0;
-    padding: 0;
-  }
+.btn-expandir {
+  color: rgb(71, 124, 171);
+  font-size: 24px;
+  cursor: pointer;
+}
 
-  h {
-    background-color: #3498db;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-  }
+ul {
+  height: 100px;
+  list-style-type: none;
+}
 
-  #searchInput {
-    border: none;
-    outline: none;
-  }
+ul li.item-menu {
+  transition: .2s;
+}
 
-  #searchButton {
-    background-color: #3498db;
-    color: #fff;
-    border: none;
-    border-radius: 0 25px 25px 0;
-    padding: 5px 10px;
-    cursor: pointer;
-  }
+ul li.ativo {
+  background-color: #87CEFA;
+}
 
-  #results {
-    margin-top: 10px;
-  }
+ul li.item-menu:hover {
+  background-color: #87CEFA;
+  /*muda a cor de quando passa o mouse*/
+}
 
-  footer {
-    background-color: cadetblue;
-    color: blanchedalmond;
-    text-align: center;
-    padding: 10px 0;
+ul li.item-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 20px 4%;
+  display: flex;
+  margin-bottom: 20px;
+  line-height: 40px;
+}
 
-    /* Estilos para melhor apresentação */
-    body {
-      font-family: Arial, sans-serif;
-      margin: 20px;
-    }
+ul li.item-menu a .txt-link {
+  margin-left: 40px;
+}
 
-    .news-container {
-      display: flex;
-      gap: 20px;
-    }
+ul li.item-menu a .icon {
+  margin-left: 40px;
+}
 
-    .tab-content {
-      display: flex;
-    }
 
-    //*Campo Noticias*/
-    #news-sidebar {
-      position: fixed;
-      top: 0;
-      right: 0;
-      width: 300px;
-      background-color: #f0f0f0;
-      padding: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
+.icon {
+  color: rgb(0, 0, 0);
+  /* cor dos ícones*/
+}
 
-    #news-list {
-      list-style: none;
-      padding: 0;
-    }
+/* Estilos CSS para a imagem da tabela */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  /* Largura da tabela */
+}
 
-    #news-list li {
-      margin-bottom: 10px;
-    }
+table img {
+  padding: 20px;
+  margin-left: 100px;
+}
 
-    a {
-      text-decoration: none;
-      color: #333;
-    }
+#searchContainer {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  padding: 5px 10px;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
 
-    a:hover {
-      color: #0066cc;
-    }
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+}
 
-    //* Estilize a sua caixa de notícias conforme necessário */
-    .noticias-container {
-      max-width: 600px;
-      margin: 20px auto;
-      padding: 10px;
-      border: 1px solid #ccc;
-    }
+h {
+  background-color: #3498db;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
 
-    .noticia {
-      margin-bottom: 15px;
-      padding: 10px;
-      border: 1px solid #ddd;
-      border-radius: 5px;
+#searchInput {
+  border: none;
+  outline: none;
+}
+
+#searchButton {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 0 25px 25px 0;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+#results {
+  margin-top: 10px;
+}
+
+footer {
+  background-color: #87CEFA;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+/* Estilos para melhor apresentação */
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+.news-container {
+  display: flex;
+  gap: 20px;
+}
+
+.tab-content {
+  display: flex;
+}
+
+/*Campo Noticias*/
+#news-sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  background-color: #f0f0f0;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#news-list {
+  list-style: none;
+  padding: 0;
+}
+
+#news-list li {
+  margin-bottom: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+a:hover {
+  color: #0066cc;
+}
+
+/* Estilize a sua caixa de notícias conforme necessário */
+.noticias-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.noticia {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.border {
+  margin-left: 120px;
+}
