@@ -1,9 +1,5 @@
 # Projeto de Interface
 
-## User Flow
-
-A imagem a seguir ilustra o fluxograma que é uma representação esquemática do site.
-
 # Wireframes
 Abaixo o protótipo representando o design de interface.
 
