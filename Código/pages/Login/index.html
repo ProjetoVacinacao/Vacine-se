@@ -9,54 +9,41 @@
 </head>
 
 <body>
-<div class="container">
-  <div class="form-image">
-  <img src="img/login.png.png">
-  </div>
-  <form id="login-form">
-    <div class="form-header">
-    <div class="title">
-      <h1>Login</h1>
+  <div class="container">
+    <div class="form-image">
+      <img src="../images/login.png">
     </div>
-    </div>
-    <div class="input-group">
-    <div class="input-box">
-      <label for="username">Usuário(CPF)</label>
-      <input type="text" id="username" placeholder="Digite seu CPF" required><br>
-      </div>
-      <div class="input-box">
-        <label for="password">Senha</label>
-        <input type="password" id="password" placeholder="Digite sua senha" required><br>
+    <form id="login-form" onsubmit="entrarUsuario(); return false;">
+      <div class="form-header">
+        <div class="title">
+          <h1>Login</h1>
         </div>
-      <div class="remember">
-        <label>
-          <input type="checkbox">Remember me 
-        </label>
-        <a href="#" Esqueceu a senha? </a>
       </div>
-    <div class="input-box">
-      <input type="submit" value="Entrar">
-    </div>
-    <div class="input-box">
-      <p> Não tem conta? <a href="#"> Inscreva-se</a></p>
-    </div>
-    </div>
-  </form>
-  
-  
-</div>
-
-
-
-
-
-
-
-
-
-  
+      <div class="input-group">
+        <div class="input-box">
+          <label for="username">Usuário(CPF)</label>
+          <input type="text" id="username" placeholder="Digite seu CPF" required><br>
+        </div>
+        <div class="input-box">
+          <label for="password">Senha</label>
+          <input type="password" id="password" placeholder="Digite sua senha" required><br>
+        </div>
+        <div class="remember">
+          <label>
+            <input type="checkbox">Lembrar
+          </label>
+          <a href="#">Esqueceu a senha? </a>
+        </div>
+        <div class="input-box">
+          <input type="submit" value="Entrar">
+        </div>
+        <div class="input-box">
+          <p> Não tem conta? <a href="../cadastro/index.html"> Inscreva-se</a></p>
+        </div>
+      </div>
+    </form>
+  </div>
   <script src="script.js"></script>
-  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
 </body>
 
 </html>
