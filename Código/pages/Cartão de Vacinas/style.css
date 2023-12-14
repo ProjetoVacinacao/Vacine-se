@@ -13,8 +13,15 @@ body {
   height: 100%;
 }
 
+h1 {
+  font-size: 24px !important;
+  font-family: 'Sua Fonte', Arial, sans-serif !important;
+  /* Adicione outras propriedades conforme necessário */
+}
+
+
 /* Início - Menu Lateral */
-nav.menu-lateral{
+nav.menu-lateral {
   height: 100%;
   background-color: #ffffff;
   box-shadow: 0 0 0 1px #000000;
@@ -38,7 +45,8 @@ ul li.ativo {
 }
 
 ul li.item-menu:hover {
-  background-color: #87CEFA; /*muda a cor de quando passa o mouse*/
+  background-color: #87CEFA;
+  /*muda a cor de quando passa o mouse*/
 }
 
 ul li.item-menu a {
@@ -60,8 +68,10 @@ ul li.item-menu a .icon {
 }
 
 .icon {
-  color: rgb(0, 0, 0); /* cor dos ícones*/
+  color: rgb(0, 0, 0);
+  /* cor dos ícones*/
 }
+
 /* Fim - Menu Lateral */
 
 .conteudo-principal {
@@ -73,11 +83,11 @@ h3 {
   margin-bottom: 20px;
 }
 
-#pesquisa{
+#pesquisa {
   margin-top: 20px;
 }
 
-#grid-vacinas{
+#grid-vacinas {
   margin-top: 40px;
   font-size: small;
 }
