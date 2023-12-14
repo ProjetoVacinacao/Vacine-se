@@ -13,7 +13,7 @@ Abaixo o protótipo representando o design de interface.
 
 ## Tela de Login
 
-![UserFlow](images/TelaLogin.png)
+![UserFlow](images/telalogin.png)
 
 ## Tela de Cadastro
 
