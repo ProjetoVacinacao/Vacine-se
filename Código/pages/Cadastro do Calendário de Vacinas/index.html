@@ -5,120 +5,107 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="style.css"> <!-- Certifique-se de que este arquivo CSS existe -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Calendário de Vacinação</title>
+  <title>Visualizar Lembretes de Vacinação</title>
+  <link rel="stylesheet" href="Vis/style.css">
+  
 </head>
 
 <body>
   <nav class="menu-lateral">
     <ul>
       <li class="item-menu ativo">
-        <a href="#">
-          <span class="icon"><i class="bi bi-calendar3"></i></span>
-          <span class="txt-link"></span>
-        </a>
-      </li>
-
-      <li class="item-menu">
-        <a href="#">
-          <span class="icon"><i class="bi bi-house-fill"></i></span>
-          <span class="txt-link"></span>
-        </a>
-      </li>
-        
-      <li class="item-menu">
-        <a href="#">
-          <span class="icon"><i class="bi bi-geo-alt-fill"></i></span>
-          <span class="txt-link"></span>
-        </a>
-      </li>
-      <li class="item-menu">
-        <a href="#">
+        <a href="../cartaoVacina/cartao.html">
           <span class="icon"><i class="bi bi-person-vcard-fill"></i></span>
           <span class="txt-link"></span>
         </a>
       </li>
       <li class="item-menu">
-        <a href="#">
-          <span class="icon"><i class="bi bi-question-lg"></i></span>
+        <a href="../calendario/indexx.html">
+          <span class="icon"><i class="bi bi-calendar3"></i></span>
           <span class="txt-link"></span>
         </a>
       </li>
       <li class="item-menu">
-        <a href="#">
-          <span class="icon"><i class="bi bi-collection-fill"></i></span>
+        <a href="../mapa/index.html">
+          <span class="icon"><i class="bi bi-geo-alt-fill"></i></span>
+          <span class="txt-link"></span>
+        </a>
+      </li>
+      <li class="item-menu">
+        <a href="../tabelaVacina/index.html">
+          <span class="icon"><i <i class="bi bi-newspaper"></i></span>
           <span class="txt-link"></span>
         </a>
       </li>
     </ul>
   </nav>
 
-  
-  <div class="container show-reminders">
-  <div class="container">
-    <div class="calendar">
-      <div class="calendar-header">
-        <span class="month-picker" id="month-picker"> Maio </span>
-        <div class="year-picker" id="year-picker">
-          <span class="year-change" id="pre-year">
-            <pre><</pre>
-          </span>
-          <span id="year">2020 </span>
-          <span class="year-change" id="next-year">
-            <pre>></pre>
-          </span>
-        </div>
+  <div class="titulo">
+    <h1>Lembretes de Vacinação</h1> <br>
+    <div class="row">
+      <hr class="width 80%">
+
+    </div>
+    <br>
+    <div class="containerPesquisas">
+
+      <div class="filtro-container">
+
+        <select id="filtroData" onchange="filtrarPorData()">
+          <option value="todos">Selecione o peródo:</option>
+          <option value="todos">Todos:</option>
+          <option value="prox7dias">Próximos semana</option>
+          <option value="prox1mes">Próximo mês</option>
+          <option value="prox3meses">Próximos 3 meses</option>
+          <tbody></tbody>
+        </select>
       </div>
 
-      <div class="calendar-body">
-        <div class="calendar-week-days">
-          <div>Domingo</div>
-          <div>Segunda</div>
-          <div>Terça</div>
-          <div>Quarta</div>
-          <div>Quinta</div>
-          <div>Sexta</div>
-          <div>Sábado</div>
-        </div>
-        <div class="calendar-days"></div>
+
+
+      <div class="divSearch">
+        <input id="pesquisarVacinas" placeholder="Pesquisar vacinas...">
+        <button onclick="pesquisarVacinas()">Pesquisar</button>
+        <tbody></tbody>
       </div>
-      <div class="calendar-footer">
-        <div class="search-container">
-          <input type="text" id="reminderInput" placeholder="Escreva o nome da vacina">
-          <button onclick="addReminder()">Cadastrar</button>
-        </div>
-        <div class="selected-day-info">
-          <div class="selected-day">
-            <span class="info-label">Selecionado:</span>
-            <span class="info-value" id="selectedDate"></span>
-          </div>
-        </div>
-        <div class="month-list"></div>
-        <div id="month"></div>
-      </div>
-    </div>
+
+      <button onclick="visualizarTodos()"">Visualizar Todos</button>
+
     </div>
 
-  
-    <div class="button-container">
-  <button onclick="showReminders()" id="visualizarLembretesBtn" disabled>Visualizar Lembretes</button>
-  <button onclick="clearReminders()" id="ocultarLembretesBtn">Ocultar Lembretes</button></div>
-  <div class = "espacamento">
-  </div>
-  
-    <table id="remindersTable">
-      <thead>
-        <tr>
-          <th>Data</th>
-          <th>Lembrete</th>
-        </tr>
-      </thead>
-      <tbody></tbody>
-    </table>
-  
+  <div class=" container">
+        <table id="remindersTable">
+          <thead>
+            <tr>
+              <th>Data</th>
+              <th>Vacina</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+    </div>
 
-  <script src="script.js"></script>
+    <script src="Vis/script.js"></script>
+
+
+
+    <script>
+
+      function irParaOutraTela() {
+
+        window.location.href = 'index.html';
+      }
+    </script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        // Chama showReminders com 'todos' ao carregar a página
+        showReminders('todos');
+      });
+    </script>
 </body>
 
 </html>
