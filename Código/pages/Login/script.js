@@ -1,29 +1,27 @@
 function entrarUsuario() {
+  const cpf = document.getElementById("username").value;
+  const senha = document.getElementById("password").value;
 
-    const usuario = document.getElementById("cpf").value;
-    const senha = document.getElementById("password").value;
+  console.log("CPF digitado:", cpf);
+  console.log("Senha digitada:", senha);
 
-    if (usuario && senha) {
-        const usuarios = JSON.parse(localStorage.getItem("cadastro")) || [];
-        const usuarioEncontrado = usuarios.find(u => u.cpf === usuario && u.password === senha);
-
-        if (usuarioEncontrado) {
-            localStorage.setItem("usuarioAtual", JSON.stringify(usuarioEncontrado));
-            alert("Bem-vindo !");
-         let admin=JSON.parse(localStorage.getItem("usuarioAtual"))
-          if(admin.cpf=="12345"){
-            location.href="vacina.html"
-          }
-          else{
-            location.href="cadastro.html"
-          }
-
-        } else {
-            alert("Dados não identificados. Tente novamente.");
-        }
+  if (cpf && senha) {
+    if (cpf === "admin" && senha === "admin") {
+      alert("Bem-vindo, Admin!");
+      window.location.href = "../cadastroVacina/index.html";
     } else {
-        alert("Por favor, preencha todos os campos.");
+      const cadastros = JSON.parse(localStorage.getItem("cadastro")) || [];
+      const usuarioEncontrado = cadastros.find(c => c.cpf === cpf && c.password === senha);
+
+      if (usuarioEncontrado) {
+        sessionStorage.setItem("usuarioAtual", JSON.stringify(usuarioEncontrado));
+        alert("Bem-vindo, " + usuarioEncontrado.firstname + "!");
+        window.location.href = "../cartaoVacina/cartao.html";
+      } else {
+        alert("Credenciais inválidas. Tente novamente.");
+      }
     }
+  } else {
+    alert("Por favor, preencha todos os campos.");
+  }
 }
-
-
