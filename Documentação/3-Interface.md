@@ -17,7 +17,7 @@ Abaixo o protótipo representando o design de interface.
 
 ## Tela de Cadastro
 
-![UserFlow](images/TelaCadastro.png)
+![UserFlow](images/telacadastro.png)
 
 ## Tela Cartão Vacina
 
@@ -29,15 +29,15 @@ Abaixo o protótipo representando o design de interface.
 
 ## Tela Mapa
 
-![UserFlow](images/TelaMapa.png)
+![UserFlow](images/postosdesaude.png)
 
 ## Tela Tabela das Idades
 
 ![UserFlow](images/TelaIdades.png)
 
-## Tela dúvidas
+## Tela Lembretes de Vacinação
 
-![UserFlow](images/DuvidasFrequentes.jpeg)
+![UserFlow](images/lembretesvacinacao.png)
 
 ## Protótipo Funcional
 
